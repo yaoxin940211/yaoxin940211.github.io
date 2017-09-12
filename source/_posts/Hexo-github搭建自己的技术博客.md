@@ -1,0 +1,70 @@
+---
+title: Hexo+github搭建自己的技术博客
+date: 2017-09-13 01:27:51
+tags:
+---
+# Hexo+github搭建自己的技术博客 #
+
+
+# 大致分以下几个步骤 #
+1. 环境搭建（node.js、git环境、gitHub账户)
+2. 安装Hexo
+3. 配置Hexo
+4. 将Hexo与github page联系起来
+5. 发表博文
+<!--More-->
+## 环境搭建 ##
+- node.js安装
+
+[https://nodejs.org/dist/v4.2.3/node-v4.2.3-x86.msi](https://nodejs.org/dist/v4.2.3/node-v4.2.3-x86.msi "node-v4.2.3-x86")
+
+[https://nodejs.org/dist/v4.2.3/node-v4.2.3-x64.msi](https://nodejs.org/dist/v4.2.3/node-v4.2.3-x64.msi "node-v4.2.3-x64")
+
+>node -v
+
+>npm -v
+
+- git安装
+
+[https://git-scm.com/downloads](https://git-scm.com/downloads "GIT官网下载")
+
+>git --version
+
+- gitHub账户
+
+注册完成以后，新建代码库， 命名为 yourname.github.io
+
+## 安装Hexo ##
+
+- 新建一个空文件夹，依次输入以下命令
+
+	>npm install hexo-cli -g
+	>npm install hexo --save
+	>hexo init
+	>npm install
+	>npm install hexo-deployer-git --save
+
+## 配置git个人信息 ##
+1. 设置git的username和email
+	>git config --global user.name "yaoxin"
+	>git config --global user.email "765076035@qq.com"
+
+2. 生成密钥
+	>ssh-keygen -t rsa -C "765076035@qq.com"
+
+## 配置_config.yml ##
+	>delply:
+	>  type: git
+	>  repo: git@github.com:yourname/yourname.github.io.git
+	>  branch: master
+
+## 发布博文 ##
+	>hexo new post "title"
+
+	>hexo g //生成
+	>hexo d //部署
+
+	>hexo g -d //生成+部署
+
+## 下载next主题 ##
+	>git clone https://github.com/iissnan/hexo-theme-next themes/next
