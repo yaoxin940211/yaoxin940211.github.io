@@ -80,3 +80,5 @@ deploy:
   type: git
   repo: git@github.com:yaoxin940211/yaoxin940211.github.io.git
   branch: master
+
+avatar: /images/avatar.jpg
