@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[CentOS7 搭建Git服务器]]></title>
+    <url>%2Funcategorized%2FCentOS7-%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[安装Gityum -y install git 查看Git版本git --version 创建Git目录和一个空的Git仓库 cd /mkdir gitcd gitgit init –bare test.gitchown -R git:git test.git 一个简单的Git服务器就搭建完成了 Windows下运行git bash git clone git@ip:/git/test.gitcd testgit remote -v]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo+github搭建自己的技术博客]]></title>
+    <url>%2Funcategorized%2FHexo-github%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[Hexo+github搭建自己的技术博客大致分以下几个步骤 环境搭建（node.js、git环境、gitHub账户) 安装Hexo 配置Hexo 将Hexo与github page联系起来 发表博文 环境搭建 node.js安装 node-downloads node -v npm -v git安装 git-downloads git –version gitHub账户 注册完成以后，新建代码库， 命名为 yourname.github.io 安装Hexo 新建一个空文件夹，依次输入以下命令 npm install hexohexo init(首次才需要)npm installnpm install hexo-deployer-git –save 配置git个人信息 设置git的username和email git config –global user.name “yaoxin940211”git config –global user.email “765076035@qq.com“ 生成密钥 ssh-keygen -t rsa -C “765076035@qq.com“ 配置_config.yml&gt;deploy: &gt; type: git &gt; repo: git@github.com:yaoxin940211/yaoxin940211.github.io.git &gt; branch: master 发布博文&gt;hexo new post &quot;title&quot; 或者 hexo n &quot;title&quot; &gt;hexo g //生成 &gt;hexo d //部署 &gt;hexo g -d //生成+部署 下载next主题&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next]]></content>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+</search>
