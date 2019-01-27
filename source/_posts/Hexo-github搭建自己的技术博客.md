@@ -38,22 +38,21 @@ tags:
 
 - 新建一个空文件夹，依次输入以下命令
 
-	>npm install hexo-cli -g
-	>npm install hexo --save
-	>hexo init
-	>npm install
-	>npm install hexo-deployer-git --save
+	> npm install hexo
+	> hexo init(首次才需要)
+	> npm install
+	> npm install hexo-deployer-git --save
 
 ## 配置git个人信息 ##
 1. 设置git的username和email
-	>git config --global user.name "yaoxin"
+	>git config --global user.name "yaoxin940211"
 	>git config --global user.email "765076035@qq.com"
 
 2. 生成密钥
 	>ssh-keygen -t rsa -C "765076035@qq.com"
 
 ## 配置_config.yml ##
-	>delply:
+	>deploy:
 	>  type: git
 	>  repo: git@github.com:yourname/yourname.github.io.git
 	>  branch: master
