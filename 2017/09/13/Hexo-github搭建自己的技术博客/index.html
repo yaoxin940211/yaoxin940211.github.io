@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Hexo+github搭建自己的技术博客 | 一个默默无闻的程序员</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hexo+github搭建自己的技术博客大致分以下几个步骤 环境搭建（node.js、git环境、gitHub账户) 安装Hexo 配置Hexo 将Hexo与github page联系起来 发表博文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+github搭建自己的技术博客">
+<meta property="og:url" content="http://yoursite.com/2017/09/13/Hexo-github搭建自己的技术博客/index.html">
+<meta property="og:site_name" content="一个默默无闻的程序员">
+<meta property="og:description" content="Hexo+github搭建自己的技术博客大致分以下几个步骤 环境搭建（node.js、git环境、gitHub账户) 安装Hexo 配置Hexo 将Hexo与github page联系起来 发表博文">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-27T09:40:57.659Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo+github搭建自己的技术博客">
+<meta name="twitter:description" content="Hexo+github搭建自己的技术博客大致分以下几个步骤 环境搭建（node.js、git环境、gitHub账户) 安装Hexo 配置Hexo 将Hexo与github page联系起来 发表博文">
+  
+    <link rel="alternate" href="/atom.xml" title="一个默默无闻的程序员" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">一个默默无闻的程序员</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Hexo-github搭建自己的技术博客" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/13/Hexo-github搭建自己的技术博客/" class="article-date">
+  <time datetime="2017-09-12T17:27:51.000Z" itemprop="datePublished">2017-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo+github搭建自己的技术博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Hexo-github搭建自己的技术博客"><a href="#Hexo-github搭建自己的技术博客" class="headerlink" title="Hexo+github搭建自己的技术博客"></a>Hexo+github搭建自己的技术博客</h1><h1 id="大致分以下几个步骤"><a href="#大致分以下几个步骤" class="headerlink" title="大致分以下几个步骤"></a>大致分以下几个步骤</h1><ol>
+<li>环境搭建（node.js、git环境、gitHub账户)</li>
+<li>安装Hexo</li>
+<li>配置Hexo</li>
+<li>将Hexo与github page联系起来</li>
+<li>发表博文<a id="more"></a>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2></li>
+</ol>
+<ul>
+<li>node.js安装</li>
+</ul>
+<p><a href="https://nodejs.org/en/" title="node官网" target="_blank" rel="noopener">node-downloads</a></p>
+<blockquote>
+<p>node -v</p>
+</blockquote>
+<blockquote>
+<p>npm -v</p>
+</blockquote>
+<ul>
+<li>git安装</li>
+</ul>
+<p><a href="https://git-scm.com/downloads" title="GIT官网下载" target="_blank" rel="noopener">git-downloads</a></p>
+<blockquote>
+<p>git –version</p>
+</blockquote>
+<ul>
+<li>gitHub账户</li>
+</ul>
+<p>注册完成以后，新建代码库， 命名为 yourname.github.io</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><ul>
+<li><p>新建一个空文件夹，依次输入以下命令</p>
+<blockquote>
+<p>npm install hexo<br>hexo init(首次才需要)<br>npm install<br>npm install hexo-deployer-git –save</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="配置git个人信息"><a href="#配置git个人信息" class="headerlink" title="配置git个人信息"></a>配置git个人信息</h2><ol>
+<li><p>设置git的username和email</p>
+<blockquote>
+<p>git config –global user.name “yaoxin940211”<br>git config –global user.email “<a href="mailto:765076035@qq.com" target="_blank" rel="noopener">765076035@qq.com</a>“</p>
+</blockquote>
+</li>
+<li><p>生成密钥</p>
+<blockquote>
+<p>ssh-keygen -t rsa -C “<a href="mailto:765076035@qq.com" target="_blank" rel="noopener">765076035@qq.com</a>“</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h2><pre><code>&gt;deploy:
+&gt;  type: git
+&gt;  repo: git@github.com:yaoxin940211/yaoxin940211.github.io.git
+&gt;  branch: master
+</code></pre><h2 id="发布博文"><a href="#发布博文" class="headerlink" title="发布博文"></a>发布博文</h2><pre><code>&gt;hexo new post &quot;title&quot; 或者 hexo n &quot;title&quot;
+
+&gt;hexo g //生成
+&gt;hexo d //部署
+
+&gt;hexo g -d //生成+部署
+</code></pre><h2 id="下载next主题"><a href="#下载next主题" class="headerlink" title="下载next主题"></a>下载next主题</h2><pre><code>&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/13/Hexo-github搭建自己的技术博客/" data-id="cjreq9jje0001esupfzjimwxo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/09/17/CentOS7-搭建Git服务器/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          CentOS7 搭建Git服务器
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/09/17/CentOS7-搭建Git服务器/">CentOS7 搭建Git服务器</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/13/Hexo-github搭建自己的技术博客/">Hexo+github搭建自己的技术博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 姚鑫<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
