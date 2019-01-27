@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Hexo+github搭建自己的技术博客大致分以下几个步骤 环境搭建（node.js、git环境、gitHub账户) 安装Hexo 配置Hexo 将Hexo与github page联系起来 发表博文">
+<meta name="description" content="安装Gityum -y install git 查看Git版本git --version">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo+github搭建自己的技术博客">
-<meta property="og:url" content="http://yoursite.com/2017/09/13/Hexo-github搭建自己的技术博客/index.html">
+<meta property="og:title" content="CentOS7 搭建Git服务器">
+<meta property="og:url" content="http://yaoxin.site/CentOS7-搭建Git服务器/index.html">
 <meta property="og:site_name" content="Mr.Yao&#39;s Blog">
-<meta property="og:description" content="Hexo+github搭建自己的技术博客大致分以下几个步骤 环境搭建（node.js、git环境、gitHub账户) 安装Hexo 配置Hexo 将Hexo与github page联系起来 发表博文">
+<meta property="og:description" content="安装Gityum -y install git 查看Git版本git --version">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-27T10:13:25.050Z">
+<meta property="og:updated_time" content="2019-01-27T09:11:17.167Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo+github搭建自己的技术博客">
-<meta name="twitter:description" content="Hexo+github搭建自己的技术博客大致分以下几个步骤 环境搭建（node.js、git环境、gitHub账户) 安装Hexo 配置Hexo 将Hexo与github page联系起来 发表博文">
+<meta name="twitter:title" content="CentOS7 搭建Git服务器">
+<meta name="twitter:description" content="安装Gityum -y install git 查看Git版本git --version">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/13/Hexo-github搭建自己的技术博客/">
+  <link rel="canonical" href="http://yaoxin.site/CentOS7-搭建Git服务器/">
 
 
 
 
 
-  <title>Hexo+github搭建自己的技术博客 | Mr.Yao's Blog</title>
+  <title>CentOS7 搭建Git服务器 | Mr.Yao's Blog</title>
   
 
 
@@ -146,6 +146,8 @@
 
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
+    
+    <a href="https://github.com/yaoxin940211" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -160,7 +162,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">Do one thing and do it well.</p>
       
   </div>
 
@@ -252,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/13/Hexo-github搭建自己的技术博客/">
+    <link itemprop="mainEntityOfPage" href="http://yaoxin.site/CentOS7-搭建Git服务器/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Yao">
@@ -269,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo+github搭建自己的技术博客</h1>
+          <h1 class="post-title" itemprop="name headline">CentOS7 搭建Git服务器</h1>
         
 
         <div class="post-meta">
@@ -281,8 +283,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-13T01:27:51+08:00">
-                2017-09-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-17T17:03:00+08:00">
+                2017-09-17
               </time>
             
 
@@ -300,6 +302,11 @@
           
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
           
 
           
@@ -319,66 +326,18 @@
       
 
       
-        <h1 id="Hexo-github搭建自己的技术博客"><a href="#Hexo-github搭建自己的技术博客" class="headerlink" title="Hexo+github搭建自己的技术博客"></a>Hexo+github搭建自己的技术博客</h1><h1 id="大致分以下几个步骤"><a href="#大致分以下几个步骤" class="headerlink" title="大致分以下几个步骤"></a>大致分以下几个步骤</h1><ol>
-<li>环境搭建（node.js、git环境、gitHub账户)</li>
-<li>安装Hexo</li>
-<li>配置Hexo</li>
-<li>将Hexo与github page联系起来</li>
-<li>发表博文<a id="more"></a>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2></li>
-</ol>
-<ul>
-<li>node.js安装</li>
-</ul>
-<p><a href="https://nodejs.org/en/" title="node官网" target="_blank" rel="noopener">node-downloads</a></p>
-<blockquote>
-<p>node -v</p>
+        <h1 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h1><p><code>yum -y install git</code></p>
+<h1 id="查看Git版本"><a href="#查看Git版本" class="headerlink" title="查看Git版本"></a>查看Git版本</h1><p><code>git --version</code><br><a id="more"></a></p>
+<h1 id="创建Git目录和一个空的Git仓库"><a href="#创建Git目录和一个空的Git仓库" class="headerlink" title="创建Git目录和一个空的Git仓库"></a>创建Git目录和一个空的Git仓库</h1><blockquote>
+<p>cd /<br>mkdir git<br>cd git<br>git init –bare test.git<br>chown -R git:git test.git</p>
 </blockquote>
 <blockquote>
-<p>npm -v</p>
+<p>一个简单的Git服务器就搭建完成了</p>
 </blockquote>
-<ul>
-<li>git安装</li>
-</ul>
-<p><a href="https://git-scm.com/downloads" title="GIT官网下载" target="_blank" rel="noopener">git-downloads</a></p>
-<blockquote>
-<p>git –version</p>
+<h1 id="Windows下运行git-bash"><a href="#Windows下运行git-bash" class="headerlink" title="Windows下运行git bash"></a>Windows下运行git bash</h1><blockquote>
+<p>git clone git@ip:/git/test.git<br>cd test<br>git remote -v</p>
 </blockquote>
-<ul>
-<li>gitHub账户</li>
-</ul>
-<p>注册完成以后，新建代码库， 命名为 yourname.github.io</p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><ul>
-<li><p>新建一个空文件夹，依次输入以下命令</p>
-<blockquote>
-<p>npm install hexo<br>hexo init(首次才需要)<br>npm install<br>npm install hexo-deployer-git –save</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="配置git个人信息"><a href="#配置git个人信息" class="headerlink" title="配置git个人信息"></a>配置git个人信息</h2><ol>
-<li><p>设置git的username和email</p>
-<blockquote>
-<p>git config –global user.name “yaoxin940211”<br>git config –global user.email “<a href="mailto:765076035@qq.com" target="_blank" rel="noopener">765076035@qq.com</a>“</p>
-</blockquote>
-</li>
-<li><p>生成密钥</p>
-<blockquote>
-<p>ssh-keygen -t rsa -C “<a href="mailto:765076035@qq.com" target="_blank" rel="noopener">765076035@qq.com</a>“</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h2><pre><code>&gt;deploy:
-&gt;  type: git
-&gt;  repo: git@github.com:yaoxin940211/yaoxin940211.github.io.git
-&gt;  branch: master
-</code></pre><h2 id="发布博文"><a href="#发布博文" class="headerlink" title="发布博文"></a>发布博文</h2><pre><code>&gt;hexo new post &quot;title&quot; 或者 hexo n &quot;title&quot;
 
-&gt;hexo g //生成
-&gt;hexo d //部署
-
-&gt;hexo g -d //生成+部署
-</code></pre><h2 id="下载next主题"><a href="#下载next主题" class="headerlink" title="下载next主题"></a>下载next主题</h2><pre><code>&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next
-</code></pre>
       
     </div>
     
@@ -431,15 +390,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/Hexo-github搭建自己的技术博客/" rel="next" title="Hexo+github搭建自己的技术博客">
+                <i class="fa fa-chevron-left"></i> Hexo+github搭建自己的技术博客
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/17/CentOS7-搭建Git服务器/" rel="prev" title="CentOS7 搭建Git服务器">
-                CentOS7 搭建Git服务器 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -467,6 +426,11 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MjM4NC8xODkzMQ"></div>
+    </div>
 
   
 
@@ -508,7 +472,7 @@
               <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Mr.Yao">
             
               <p class="site-author-name" itemprop="name">Mr.Yao</p>
-              <p class="site-description motion-element" itemprop="description">Do one thing and do it well.</p>
+              <p class="site-description motion-element" itemprop="description">Mr.Yao个人站点</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -583,7 +547,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-github搭建自己的技术博客"><span class="nav-number">1.</span> <span class="nav-text">Hexo+github搭建自己的技术博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#大致分以下几个步骤"><span class="nav-number">2.</span> <span class="nav-text">大致分以下几个步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境搭建"><span class="nav-number">2.1.</span> <span class="nav-text">环境搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置git个人信息"><span class="nav-number">2.3.</span> <span class="nav-text">配置git个人信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-config-yml"><span class="nav-number">2.4.</span> <span class="nav-text">配置_config.yml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布博文"><span class="nav-number">2.5.</span> <span class="nav-text">发布博文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载next主题"><span class="nav-number">2.6.</span> <span class="nav-text">下载next主题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Git"><span class="nav-number">1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看Git版本"><span class="nav-number">2.</span> <span class="nav-text">查看Git版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建Git目录和一个空的Git仓库"><span class="nav-number">3.</span> <span class="nav-text">创建Git目录和一个空的Git仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows下运行git-bash"><span class="nav-number">4.</span> <span class="nav-text">Windows下运行git bash</span></a></li></ol></div>
             
 
           </div>
@@ -627,6 +591,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
 
 
@@ -670,6 +654,9 @@
 
 
 
+  
+  
+
 
 
 
@@ -706,6 +693,16 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
   
 
 
@@ -761,6 +758,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
