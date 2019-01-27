@@ -4,17 +4,17 @@
 
 # Site
 title: Mr.Yao's Blog
-subtitle:
-description: Do one thing and do it well.
+subtitle: Do one thing and do it well.
+description: "Mr.Yao个人站点"
 author: Mr.Yao
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://yaoxin.site
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :category/:title/
 permalink_defaults:
 
 # Directory
@@ -82,3 +82,9 @@ deploy:
   branch: master
 
 avatar: /images/avatar.jpg
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
