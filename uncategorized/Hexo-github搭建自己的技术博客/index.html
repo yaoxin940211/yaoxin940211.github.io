@@ -130,18 +130,18 @@
 
 
 
-<meta name="description" content="Hexo+github搭建自己的技术博客大致分以下几个步骤 环境搭建（node.js、git环境、gitHub账户) 安装Hexo 配置Hexo 将Hexo与github page联系起来 发表博文">
+<meta name="description" content="Hexo+github搭建自己的技术博客大致分以下几个步骤 环境搭建（node.js、git环境、gitHub账户) 安装和配置Hexo 将Hexo与github page联系起来 发表博文">
 <meta name="keywords" content="blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo+github搭建自己的技术博客">
 <meta property="og:url" content="http://yaoxin.site/uncategorized/Hexo-github搭建自己的技术博客/index.html">
 <meta property="og:site_name" content="Mr.Yao&#39;s Blog">
-<meta property="og:description" content="Hexo+github搭建自己的技术博客大致分以下几个步骤 环境搭建（node.js、git环境、gitHub账户) 安装Hexo 配置Hexo 将Hexo与github page联系起来 发表博文">
+<meta property="og:description" content="Hexo+github搭建自己的技术博客大致分以下几个步骤 环境搭建（node.js、git环境、gitHub账户) 安装和配置Hexo 将Hexo与github page联系起来 发表博文">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-27T12:54:10.000Z">
+<meta property="og:updated_time" content="2019-01-27T13:14:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+github搭建自己的技术博客">
-<meta name="twitter:description" content="Hexo+github搭建自己的技术博客大致分以下几个步骤 环境搭建（node.js、git环境、gitHub账户) 安装Hexo 配置Hexo 将Hexo与github page联系起来 发表博文">
+<meta name="twitter:description" content="Hexo+github搭建自己的技术博客大致分以下几个步骤 环境搭建（node.js、git环境、gitHub账户) 安装和配置Hexo 将Hexo与github page联系起来 发表博文">
 
 
 
@@ -250,6 +250,16 @@
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
           </a>
         </li>
       
@@ -383,7 +393,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-27T20:54:10+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-27T21:14:10+08:00">
                 2019-01-27
               </time>
             
@@ -416,7 +426,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  239
+                  225
                 </span>
               
 
@@ -455,8 +465,7 @@
       
         <h1 id="Hexo-github搭建自己的技术博客"><a href="#Hexo-github搭建自己的技术博客" class="headerlink" title="Hexo+github搭建自己的技术博客"></a>Hexo+github搭建自己的技术博客</h1><h1 id="大致分以下几个步骤"><a href="#大致分以下几个步骤" class="headerlink" title="大致分以下几个步骤"></a>大致分以下几个步骤</h1><ol>
 <li>环境搭建（node.js、git环境、gitHub账户)</li>
-<li>安装Hexo</li>
-<li>配置Hexo</li>
+<li>安装和配置Hexo</li>
 <li>将Hexo与github page联系起来</li>
 <li>发表博文<a id="more"></a>
 <h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2></li>
@@ -501,18 +510,20 @@
 </blockquote>
 </li>
 </ol>
-<h2 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h2><pre><code>&gt;deploy:
-&gt;  type: git
-&gt;  repo: git@github.com:yaoxin940211/yaoxin940211.github.io.git
-&gt;  branch: master
-</code></pre><h2 id="发布博文"><a href="#发布博文" class="headerlink" title="发布博文"></a>发布博文</h2><pre><code>&gt;hexo new post &quot;title&quot; 或者 hexo n &quot;title&quot;
+<h2 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:yaoxin940211/yaoxin940211.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h2 id="发布博文"><a href="#发布博文" class="headerlink" title="发布博文"></a>发布博文</h2><blockquote>
+<p>hexo new post “title” 或者 hexo n “title”</p>
+</blockquote>
+<blockquote>
+<p>hexo g //生成<br>hexo d //部署</p>
+</blockquote>
+<blockquote>
+<p>hexo g -d //生成+部署</p>
+</blockquote>
+<h2 id="下载next主题"><a href="#下载next主题" class="headerlink" title="下载next主题"></a>下载next主题</h2><blockquote>
+<p>git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next</a> themes/next</p>
+</blockquote>
 
-&gt;hexo g //生成
-&gt;hexo d //部署
-
-&gt;hexo g -d //生成+部署
-</code></pre><h2 id="下载next主题"><a href="#下载next主题" class="headerlink" title="下载next主题"></a>下载next主题</h2><pre><code>&gt;git clone https://github.com/iissnan/hexo-theme-next themes/next
-</code></pre>
       
     </div>
     
