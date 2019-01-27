@@ -16,9 +16,7 @@ tags:
 ## 环境搭建 ##
 - node.js安装
 
-[https://nodejs.org/dist/v4.2.3/node-v4.2.3-x86.msi](https://nodejs.org/dist/v4.2.3/node-v4.2.3-x86.msi "node-v4.2.3-x86")
-
-[https://nodejs.org/dist/v4.2.3/node-v4.2.3-x64.msi](https://nodejs.org/dist/v4.2.3/node-v4.2.3-x64.msi "node-v4.2.3-x64")
+[node-downloads](https://nodejs.org/en/ "node官网")
 
 >node -v
 
@@ -26,7 +24,7 @@ tags:
 
 - git安装
 
-[https://git-scm.com/downloads](https://git-scm.com/downloads "GIT官网下载")
+[git-downloads](https://git-scm.com/downloads "GIT官网下载")
 
 >git --version
 
@@ -54,11 +52,11 @@ tags:
 ## 配置_config.yml ##
 	>deploy:
 	>  type: git
-	>  repo: git@github.com:yourname/yourname.github.io.git
+	>  repo: git@github.com:yaoxin940211/yaoxin940211.github.io.git
 	>  branch: master
 
 ## 发布博文 ##
-	>hexo new post "title"
+	>hexo new post "title" 或者 hexo n "title"
 
 	>hexo g //生成
 	>hexo d //部署
