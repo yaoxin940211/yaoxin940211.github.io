@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[一键搭建SS实现科学上网]]></title>
+    <url>%2Funcategorized%2F%E4%B8%80%E9%94%AE%E6%90%AD%E5%BB%BASS%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%2F</url>
+    <content type="text"><![CDATA[搭建SS下载一键搭建ss脚本12345git clone https://github.com/flyzy2005/ss-flygit安装Centos： yum -y install gitUbuntu/Debian： apt-get -y install git 运行搭建脚本1ss-fly/ss-fly.sh -i [passwd] [port] 相关ss操作12345修改配置文件：vim /etc/shadowsocks.json停止ss服务：ssserver -c /etc/shadowsocks.json -d stop启动ss服务：ssserver -c /etc/shadowsocks.json -d start重启ss服务：ssserver -c /etc/shadowsocks.json -d restart卸载ss服务：ss-fly/ss-fly.sh -uninstall 开启BBR加速开启BBR加速1234567ss-fly/ss-fly.sh -bbr验证加速是否开启成功sysctl net.ipv4.tcp_available_congestion_control如果返回值有bbr，说明开启成功net.ipv4.tcp_available_congestion_control = bbr cubic reno shadowsocks.json配置单用户配置123456789&#123; &quot;server&quot;:&quot;0.0.0.0&quot;, &quot;server_port&quot;:1024, &quot;local_address&quot;: &quot;127.0.0.1&quot;, &quot;local_port&quot;:1080, &quot;password&quot;:&quot;mypassword&quot;, &quot;timeout&quot;:300, &quot;method&quot;:&quot;aes-256-cfb&quot;&#125; 多用户配置123456789101112131415161718192021&#123; &quot;server&quot;:&quot;0.0.0.0&quot;, &quot;local_address&quot;:&quot;127.0.0.1&quot;, &quot;local_port&quot;:1080, &quot;port_password&quot;:&#123; &quot;1314&quot;:&quot;yaoxin&quot;, &quot;1315&quot;:&quot;yaoxin&quot;, &quot;1316&quot;:&quot;yaoxin&quot;, &quot;1317&quot;:&quot;yaoxin&quot;, &quot;2010&quot;:&quot;yaoxin&quot;, &quot;2011&quot;:&quot;yaoxin&quot;, &quot;2012&quot;:&quot;yaoxin&quot;, &quot;2013&quot;:&quot;yaoxin&quot;, &quot;2015&quot;:&quot;yaoxin&quot;, &quot;3010&quot;:&quot;yaoxin&quot;, &quot;3011&quot;:&quot;yaoxin&quot; &#125;, &quot;timeout&quot;:300, &quot;method&quot;:&quot;aes-256-cfb&quot;, &quot;fast_open&quot;:false&#125; 搭建SSR 如果要安装SSR，需要先卸载SS！！！ 下载一键搭建ssr脚本1git clone https://github.com/flyzy2005/ss-fly 运行搭建脚本1ss-fly/ss-fly.sh -ssr 输入相关参数相关ssr操作123456789启动：/etc/init.d/shadowsocks start停止：/etc/init.d/shadowsocks stop重启：/etc/init.d/shadowsocks restart状态：/etc/init.d/shadowsocks status卸载：./shadowsocksR.sh uninstall 配置文件路径：/etc/shadowsocks.json日志文件路径：/var/log/shadowsocks.log代码安装目录：/usr/local/shadowsocks]]></content>
+      <tags>
+        <tag>SS SSR</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CentOS7 搭建Git服务器]]></title>
     <url>%2Funcategorized%2FCentOS7-%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
     <content type="text"><![CDATA[安装Gityum -y install git 查看Git版本git --version 创建Git目录和一个空的Git仓库 cd /mkdir gitcd gitgit init –bare test.gitchown -R git:git test.git 一个简单的Git服务器就搭建完成了 Windows下运行git bash git clone git@ip:/git/test.gitcd testgit remote -v]]></content>
