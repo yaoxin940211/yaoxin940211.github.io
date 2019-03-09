@@ -12,7 +12,7 @@ git安装
 Centos： yum -y install git
 Ubuntu/Debian： apt-get -y install git
 ```
-
+<!--More-->
 ## 运行搭建脚本
 ```
 ss-fly/ss-fly.sh -i [passwd] [port]
