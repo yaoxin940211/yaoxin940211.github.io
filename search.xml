@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[Unity小技巧]]></title>
     <url>%2FUnity%2FUnity%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
-    <content type="text"><![CDATA[[TOC] Unity小技巧 安卓手机连接Unity Profiler adb forward tcp:54999 localabstract:Unity-com.tencent.tmgp.ztj 文件默认打开方式12345678910111213141516171819202122#if UNITY_EDITORusing System.Collections;using System.Collections.Generic;using UnityEditor;using UnityEditor.Callbacks;using UnityEngine;public class OpenFileEx &#123; [OnOpenAsset] public static bool OpenShaderAsset(int instanceID, int line) &#123; if (EditorUtility.InstanceIDToObject(instanceID) is Shader) &#123; string assetPath = AssetDatabase.GetAssetPath(instanceID); System.Diagnostics.Process.Start(Application.dataPath + &quot;/../&quot; + assetPath); return true; &#125; return false; &#125;&#125;#endif 脚本生命周期]]></content>
+    <content type="text"><![CDATA[Unity小技巧 安卓手机连接Unity Profiler 文件默认打开方式 脚本生命周期 Unity小技巧 安卓手机连接Unity Profiler adb forward tcp:54999 localabstract:Unity-com.tencent.tmgp.ztj 文件默认打开方式12345678910111213141516171819202122#if UNITY_EDITORusing System.Collections;using System.Collections.Generic;using UnityEditor;using UnityEditor.Callbacks;using UnityEngine;public class OpenFileEx &#123; [OnOpenAsset] public static bool OpenShaderAsset(int instanceID, int line) &#123; if (EditorUtility.InstanceIDToObject(instanceID) is Shader) &#123; string assetPath = AssetDatabase.GetAssetPath(instanceID); System.Diagnostics.Process.Start(Application.dataPath + &quot;/../&quot; + assetPath); return true; &#125; return false; &#125;&#125;#endif 脚本生命周期]]></content>
       <categories>
         <category>Unity</category>
       </categories>
