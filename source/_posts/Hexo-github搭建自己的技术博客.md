@@ -2,18 +2,20 @@
 title: Hexo+github搭建自己的技术博客
 date: 2017-09-13 01:27:51
 updated: 2019-01-27 21:14:10
-tags: blog
+tags: [blog, hexo]
+categories: Hexo使用教程
 ---
-# Hexo+github搭建自己的技术博客 #
+# Hexo+github搭建自己的技术博客
 
+[TOC]
 
-# 大致分以下几个步骤 #
+# 大致分以下几个步骤
 1. 环境搭建（node.js、git环境、gitHub账户)
 2. 安装和配置Hexo
 3. 将Hexo与github page联系起来
 4. 发表博文
 <!--More-->
-## 环境搭建 ##
+## 环境搭建
 - node.js安装
 
 [node-downloads](https://nodejs.org/en/ "node官网")
@@ -32,7 +34,7 @@ tags: blog
 
 注册完成以后，新建代码库， 命名为 yourname.github.io
 
-## 安装Hexo ##
+## 安装Hexo
 
 - 新建一个空文件夹，依次输入以下命令
 
@@ -41,7 +43,7 @@ tags: blog
 	> npm install
 	> npm install hexo-deployer-git --save
 
-## 配置git个人信息 ##
+## 配置git个人信息
 1. 设置git的username和email
 	>git config --global user.name "yaoxin940211"
 	>git config --global user.email "765076035@qq.com"
@@ -49,7 +51,7 @@ tags: blog
 2. 生成密钥
 	>ssh-keygen -t rsa -C "765076035@qq.com"
 
-## 配置_config.yml ##
+## 配置_config.yml
 ```
 deploy:
   type: git
@@ -57,7 +59,7 @@ deploy:
   branch: master
 ```
 
-## 发布博文 ##
+## 发布博文
 >hexo new post "title" 或者 hexo n "title"
 
 >hexo g //生成
@@ -65,5 +67,5 @@ deploy:
 
 > hexo g -d //生成+部署
 
-## 下载next主题 ##
+## 下载next主题
 >git clone https://github.com/iissnan/hexo-theme-next themes/next
