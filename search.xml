@@ -2,16 +2,22 @@
 <search>
   <entry>
     <title><![CDATA[Git常用命令]]></title>
-    <url>%2Funcategorized%2FGit%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <url>%2FGit%E4%BD%BF%E7%94%A8%2FGit%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
     <content type="text"><![CDATA[[TOC] #Git常用命令 分支操作1234567查看远程分支: git branch -r查看本地分支: git branch查看所有分支: git branch -a删除本地分支: git branch -d &lt;BranchName&gt;删除远程分支: 1. git branch -r -d origin/&lt;BranchName&gt; 2. git push origin (空格):&lt;BranchName&gt; 或 git push origin --delete &lt;BranchName&gt;]]></content>
+      <categories>
+        <category>Git使用</category>
+      </categories>
       <tags>
         <tag>Git</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Unity小技巧]]></title>
-    <url>%2Funcategorized%2FUnity%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
+    <url>%2FUnity%2FUnity%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
     <content type="text"><![CDATA[[TOC] Unity小技巧 安卓手机连接Unity Profiler adb forward tcp:54999 localabstract:Unity-com.tencent.tmgp.ztj 文件默认打开方式12345678910111213141516171819202122#if UNITY_EDITORusing System.Collections;using System.Collections.Generic;using UnityEditor;using UnityEditor.Callbacks;using UnityEngine;public class OpenFileEx &#123; [OnOpenAsset] public static bool OpenShaderAsset(int instanceID, int line) &#123; if (EditorUtility.InstanceIDToObject(instanceID) is Shader) &#123; string assetPath = AssetDatabase.GetAssetPath(instanceID); System.Diagnostics.Process.Start(Application.dataPath + &quot;/../&quot; + assetPath); return true; &#125; return false; &#125;&#125;#endif 脚本生命周期]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
       <tags>
         <tag>Tips</tag>
         <tag>Unity</tag>
@@ -19,8 +25,11 @@
   </entry>
   <entry>
     <title><![CDATA[常用批处理代码段]]></title>
-    <url>%2Funcategorized%2F%E5%B8%B8%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E4%BB%A3%E7%A0%81%E6%AE%B5%2F</url>
+    <url>%2F%E6%89%B9%E5%A4%84%E7%90%86%2F%E5%B8%B8%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E4%BB%A3%E7%A0%81%E6%AE%B5%2F</url>
     <content type="text"><![CDATA[[TOC] 常用批处理代码段 监测程序是否运行并自动启动12345678910111213141516171819@echo offset APPName=unity.exeset APPPath=C:\Progra~1\Unity5.6.4p3\Editor\:startapp tasklist|findstr /i %APPName% &gt; nul if %errorlevel% == 0 ( echo ^&gt;%date:~0,10% %time:~0,8% "程序正在运行中..." ) else ( echo ^&gt;%date:~0,10% %time:~0,8% "程序未运行..." start %APPPath%%AppName% 2&gt;nul &amp;&amp; echo ^&gt;%date:~0,10% %time:~0,8% "程序启动成功..." ) rem 等待5秒 for /l %%i in (1,1,5) do ( ping -n 1 -w 1000 125.0.0.1&gt;nul ) goto startapp 打开资源管理器并选中某个文件123456789101112@echo offset dir=D:\Testif not exist %dir%\%1.xlsx ( echo No Such File pause exit)svn revert %dir%\%1.xlsxsvn up %dir%\%1.xlsxrem important!explorer /select,%dir%\%1.xlsx 目录解析1234567891011121314151617181920@echo offrem 1.获取批处理自身的完整路径echo %0rem 2.获取批处理自身的完整路径，并去掉首尾的引号echo %~0rem 3.获取批处理自身的文件名和后缀名echo %~nx0rem 4.获取批处理自身的文件名echo %~n0rem 5.获取批处理自身的后缀名echo %~x0rem 6.获取批处理自身的完整路径，不含文件名echo %~dp0rem 7.获取批处理自身的盘符echo %~d0rem 8.获取批处理自身的大小echo %~z0rem 9.获取批处理自身的修改时间echo %~t0pause]]></content>
+      <categories>
+        <category>批处理</category>
+      </categories>
       <tags>
         <tag>批处理</tag>
         <tag>bat</tag>
@@ -45,8 +54,11 @@
   </entry>
   <entry>
     <title><![CDATA[一键搭建SS实现科学上网]]></title>
-    <url>%2Funcategorized%2F%E4%B8%80%E9%94%AE%E6%90%AD%E5%BB%BASS%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%2F</url>
+    <url>%2F%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%2F%E4%B8%80%E9%94%AE%E6%90%AD%E5%BB%BASS%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%2F</url>
     <content type="text"><![CDATA[[TOC] 搭建SS下载一键搭建ss脚本12345git clone https://github.com/flyzy2005/ss-flygit安装Centos： yum -y install gitUbuntu/Debian： apt-get -y install git 运行搭建脚本1ss-fly/ss-fly.sh -i [passwd] [port] 相关ss操作12345修改配置文件：vim /etc/shadowsocks.json停止ss服务：ssserver -c /etc/shadowsocks.json -d stop启动ss服务：ssserver -c /etc/shadowsocks.json -d start重启ss服务：ssserver -c /etc/shadowsocks.json -d restart卸载ss服务：ss-fly/ss-fly.sh -uninstall 开启BBR加速开启BBR加速1234567ss-fly/ss-fly.sh -bbr验证加速是否开启成功sysctl net.ipv4.tcp_available_congestion_control如果返回值有bbr，说明开启成功net.ipv4.tcp_available_congestion_control = bbr cubic reno shadowsocks.json配置单用户配置123456789&#123; &quot;server&quot;:&quot;0.0.0.0&quot;, &quot;server_port&quot;:1024, &quot;local_address&quot;: &quot;127.0.0.1&quot;, &quot;local_port&quot;:1080, &quot;password&quot;:&quot;mypassword&quot;, &quot;timeout&quot;:300, &quot;method&quot;:&quot;aes-256-cfb&quot;&#125; 多用户配置123456789101112131415161718192021&#123; &quot;server&quot;:&quot;0.0.0.0&quot;, &quot;local_address&quot;:&quot;127.0.0.1&quot;, &quot;local_port&quot;:1080, &quot;port_password&quot;:&#123; &quot;1314&quot;:&quot;yaoxin&quot;, &quot;1315&quot;:&quot;yaoxin&quot;, &quot;1316&quot;:&quot;yaoxin&quot;, &quot;1317&quot;:&quot;yaoxin&quot;, &quot;2010&quot;:&quot;yaoxin&quot;, &quot;2011&quot;:&quot;yaoxin&quot;, &quot;2012&quot;:&quot;yaoxin&quot;, &quot;2013&quot;:&quot;yaoxin&quot;, &quot;2015&quot;:&quot;yaoxin&quot;, &quot;3010&quot;:&quot;yaoxin&quot;, &quot;3011&quot;:&quot;yaoxin&quot; &#125;, &quot;timeout&quot;:300, &quot;method&quot;:&quot;aes-256-cfb&quot;, &quot;fast_open&quot;:false&#125; 搭建SSR 如果要安装SSR，需要先卸载SS！！！ 下载一键搭建ssr脚本1git clone https://github.com/flyzy2005/ss-fly 运行搭建脚本1ss-fly/ss-fly.sh -ssr 输入相关参数相关ssr操作123456789启动：/etc/init.d/shadowsocks start停止：/etc/init.d/shadowsocks stop重启：/etc/init.d/shadowsocks restart状态：/etc/init.d/shadowsocks status卸载：./shadowsocksR.sh uninstall 配置文件路径：/etc/shadowsocks.json日志文件路径：/var/log/shadowsocks.log代码安装目录：/usr/local/shadowsocks]]></content>
+      <categories>
+        <category>科学上网</category>
+      </categories>
       <tags>
         <tag>SS</tag>
         <tag>SSR</tag>

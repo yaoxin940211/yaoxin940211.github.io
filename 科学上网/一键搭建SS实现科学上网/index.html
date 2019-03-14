@@ -119,7 +119,7 @@
 
 
 
-  <meta name="keywords" content="Git,">
+  <meta name="keywords" content="SS,SSR,">
 
 
 
@@ -130,18 +130,18 @@
 
 
 
-<meta name="description" content="[TOC] #Git常用命令">
-<meta name="keywords" content="Git">
+<meta name="description" content="[TOC] 搭建SS下载一键搭建ss脚本12345git clone https://github.com/flyzy2005/ss-flygit安装Centos： yum -y install gitUbuntu/Debian： apt-get -y install git">
+<meta name="keywords" content="SS,SSR">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git常用命令">
-<meta property="og:url" content="http://yaoxin.site/uncategorized/Git常用命令/index.html">
+<meta property="og:title" content="一键搭建SS实现科学上网">
+<meta property="og:url" content="http://yaoxin.site/科学上网/一键搭建SS实现科学上网/index.html">
 <meta property="og:site_name" content="Mr.Yao&#39;s Blog">
-<meta property="og:description" content="[TOC] #Git常用命令">
+<meta property="og:description" content="[TOC] 搭建SS下载一键搭建ss脚本12345git clone https://github.com/flyzy2005/ss-flygit安装Centos： yum -y install gitUbuntu/Debian： apt-get -y install git">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-14T13:53:39.590Z">
+<meta property="og:updated_time" content="2019-03-14T14:13:49.448Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git常用命令">
-<meta name="twitter:description" content="[TOC] #Git常用命令">
+<meta name="twitter:title" content="一键搭建SS实现科学上网">
+<meta name="twitter:description" content="[TOC] 搭建SS下载一键搭建ss脚本12345git clone https://github.com/flyzy2005/ss-flygit安装Centos： yum -y install gitUbuntu/Debian： apt-get -y install git">
 
 
 
@@ -171,13 +171,13 @@
 
 
 
-  <link rel="canonical" href="http://yaoxin.site/uncategorized/Git常用命令/">
+  <link rel="canonical" href="http://yaoxin.site/科学上网/一键搭建SS实现科学上网/">
 
 
 
 
 
-  <title>Git常用命令 | Mr.Yao's Blog</title>
+  <title>一键搭建SS实现科学上网 | Mr.Yao's Blog</title>
   
 
 
@@ -358,7 +358,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yaoxin.site/uncategorized/Git常用命令/">
+    <link itemprop="mainEntityOfPage" href="http://yaoxin.site/科学上网/一键搭建SS实现科学上网/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Yao">
@@ -375,7 +375,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git常用命令</h1>
+          <h1 class="post-title" itemprop="name headline">一键搭建SS实现科学上网</h1>
         
 
         <div class="post-meta">
@@ -387,8 +387,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-14T21:45:51+08:00">
-                2019-03-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-09T20:35:57+08:00">
+                2019-03-09
               </time>
             
 
@@ -403,12 +403,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-14T21:53:39+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-14T22:13:49+08:00">
                 2019-03-14
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/科学上网/" itemprop="url" rel="index">
+                    <span itemprop="name">科学上网</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -431,7 +453,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  81
+                  435
                 </span>
               
 
@@ -447,7 +469,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -469,8 +491,21 @@
 
       
         <p>[TOC]</p>
-<p>#Git常用命令<br><a id="more"></a></p>
-<h2 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">查看远程分支: git branch -r</span><br><span class="line">查看本地分支: git branch</span><br><span class="line">查看所有分支: git branch -a</span><br><span class="line">删除本地分支: git branch -d &lt;BranchName&gt;</span><br><span class="line">删除远程分支: 1. git branch -r -d origin/&lt;BranchName&gt;</span><br><span class="line">             2. git push origin (空格):&lt;BranchName&gt;</span><br><span class="line">             或 git push origin --delete &lt;BranchName&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="搭建SS"><a href="#搭建SS" class="headerlink" title="搭建SS"></a>搭建SS</h1><h2 id="下载一键搭建ss脚本"><a href="#下载一键搭建ss脚本" class="headerlink" title="下载一键搭建ss脚本"></a>下载一键搭建ss脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/flyzy2005/ss-fly</span><br><span class="line"></span><br><span class="line">git安装</span><br><span class="line">Centos： yum -y install git</span><br><span class="line">Ubuntu/Debian： apt-get -y install git</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="运行搭建脚本"><a href="#运行搭建脚本" class="headerlink" title="运行搭建脚本"></a>运行搭建脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ss-fly/ss-fly.sh -i [passwd] [port]</span><br></pre></td></tr></table></figure>
+<h2 id="相关ss操作"><a href="#相关ss操作" class="headerlink" title="相关ss操作"></a>相关ss操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">修改配置文件：vim /etc/shadowsocks.json</span><br><span class="line">停止ss服务：ssserver -c /etc/shadowsocks.json -d stop</span><br><span class="line">启动ss服务：ssserver -c /etc/shadowsocks.json -d start</span><br><span class="line">重启ss服务：ssserver -c /etc/shadowsocks.json -d restart</span><br><span class="line">卸载ss服务：ss-fly/ss-fly.sh -uninstall</span><br></pre></td></tr></table></figure>
+<h1 id="开启BBR加速"><a href="#开启BBR加速" class="headerlink" title="开启BBR加速"></a>开启BBR加速</h1><h2 id="开启BBR加速-1"><a href="#开启BBR加速-1" class="headerlink" title="开启BBR加速"></a>开启BBR加速</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ss-fly/ss-fly.sh -bbr</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">验证加速是否开启成功</span><br><span class="line">sysctl net.ipv4.tcp_available_congestion_control</span><br><span class="line">如果返回值有bbr，说明开启成功</span><br><span class="line">net.ipv4.tcp_available_congestion_control = bbr cubic reno</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="shadowsocks-json配置"><a href="#shadowsocks-json配置" class="headerlink" title="shadowsocks.json配置"></a>shadowsocks.json配置</h1><h2 id="单用户配置"><a href="#单用户配置" class="headerlink" title="单用户配置"></a>单用户配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;server_port&quot;:1024,</span><br><span class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">    &quot;local_port&quot;:1080,</span><br><span class="line">    &quot;password&quot;:&quot;mypassword&quot;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="多用户配置"><a href="#多用户配置" class="headerlink" title="多用户配置"></a>多用户配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;,</span><br><span class="line">    &quot;local_port&quot;:1080,</span><br><span class="line">    &quot;port_password&quot;:&#123;</span><br><span class="line">        &quot;1314&quot;:&quot;yaoxin&quot;,</span><br><span class="line">    	&quot;1315&quot;:&quot;yaoxin&quot;,</span><br><span class="line">    	&quot;1316&quot;:&quot;yaoxin&quot;,</span><br><span class="line">    	&quot;1317&quot;:&quot;yaoxin&quot;,</span><br><span class="line">    	&quot;2010&quot;:&quot;yaoxin&quot;,</span><br><span class="line">    	&quot;2011&quot;:&quot;yaoxin&quot;,</span><br><span class="line">    	&quot;2012&quot;:&quot;yaoxin&quot;,</span><br><span class="line">    	&quot;2013&quot;:&quot;yaoxin&quot;,</span><br><span class="line">    	&quot;2015&quot;:&quot;yaoxin&quot;,</span><br><span class="line">    	&quot;3010&quot;:&quot;yaoxin&quot;,</span><br><span class="line">    	&quot;3011&quot;:&quot;yaoxin&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;fast_open&quot;:false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="搭建SSR"><a href="#搭建SSR" class="headerlink" title="搭建SSR"></a>搭建SSR</h1><blockquote>
+<p>如果要安装SSR，需要先卸载SS！！！</p>
+</blockquote>
+<h2 id="下载一键搭建ssr脚本"><a href="#下载一键搭建ssr脚本" class="headerlink" title="下载一键搭建ssr脚本"></a>下载一键搭建ssr脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/flyzy2005/ss-fly</span><br></pre></td></tr></table></figure>
+<h2 id="运行搭建脚本-1"><a href="#运行搭建脚本-1" class="headerlink" title="运行搭建脚本"></a>运行搭建脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ss-fly/ss-fly.sh -ssr</span><br></pre></td></tr></table></figure>
+<h2 id="输入相关参数"><a href="#输入相关参数" class="headerlink" title="输入相关参数"></a>输入相关参数</h2><h2 id="相关ssr操作"><a href="#相关ssr操作" class="headerlink" title="相关ssr操作"></a>相关ssr操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">启动：/etc/init.d/shadowsocks start</span><br><span class="line">停止：/etc/init.d/shadowsocks stop</span><br><span class="line">重启：/etc/init.d/shadowsocks restart</span><br><span class="line">状态：/etc/init.d/shadowsocks status</span><br><span class="line">卸载：./shadowsocksR.sh uninstall</span><br><span class="line"> </span><br><span class="line">配置文件路径：/etc/shadowsocks.json</span><br><span class="line">日志文件路径：/var/log/shadowsocks.log</span><br><span class="line">代码安装目录：/usr/local/shadowsocks</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -517,7 +552,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
+            <a href="/tags/SS/" rel="tag"><i class="fa fa-tag"></i> SS</a>
+          
+            <a href="/tags/SSR/" rel="tag"><i class="fa fa-tag"></i> SSR</a>
           
         </div>
       
@@ -530,8 +567,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uncategorized/Unity小技巧/" rel="next" title="Unity小技巧">
-                <i class="fa fa-chevron-left"></i> Unity小技巧
+              <a href="/uncategorized/CentOS7-搭建Git服务器/" rel="next" title="CentOS7 搭建Git服务器">
+                <i class="fa fa-chevron-left"></i> CentOS7 搭建Git服务器
               </a>
             
           </div>
@@ -539,6 +576,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/uncategorized/UML类图关系/" rel="prev" title="UML类图关系">
+                UML类图关系 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -639,7 +680,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -733,7 +774,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分支操作"><span class="nav-number">1.</span> <span class="nav-text">分支操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建SS"><span class="nav-number">1.</span> <span class="nav-text">搭建SS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载一键搭建ss脚本"><span class="nav-number">1.1.</span> <span class="nav-text">下载一键搭建ss脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行搭建脚本"><span class="nav-number">1.2.</span> <span class="nav-text">运行搭建脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关ss操作"><span class="nav-number">1.3.</span> <span class="nav-text">相关ss操作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开启BBR加速"><span class="nav-number">2.</span> <span class="nav-text">开启BBR加速</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#开启BBR加速-1"><span class="nav-number">2.1.</span> <span class="nav-text">开启BBR加速</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shadowsocks-json配置"><span class="nav-number">3.</span> <span class="nav-text">shadowsocks.json配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单用户配置"><span class="nav-number">3.1.</span> <span class="nav-text">单用户配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多用户配置"><span class="nav-number">3.2.</span> <span class="nav-text">多用户配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建SSR"><span class="nav-number">4.</span> <span class="nav-text">搭建SSR</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载一键搭建ssr脚本"><span class="nav-number">4.1.</span> <span class="nav-text">下载一键搭建ssr脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行搭建脚本-1"><span class="nav-number">4.2.</span> <span class="nav-text">运行搭建脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入相关参数"><span class="nav-number">4.3.</span> <span class="nav-text">输入相关参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关ssr操作"><span class="nav-number">4.4.</span> <span class="nav-text">相关ssr操作</span></a></li></ol></li></ol></div>
             
 
           </div>
