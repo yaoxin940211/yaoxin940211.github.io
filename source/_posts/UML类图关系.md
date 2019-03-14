@@ -3,14 +3,14 @@ title: UML类图关系
 date: 2019-03-14 21:20:13
 tags: UML
 ---
-
-<span id="top"></span>
-[TOC]
-
-[End](#end)
+<!-- toc -->
 
 # 类图关系
+
 <!--More-->
+<span id="top"></span>
+[End](#end)
+
 ![UML类图][]
 
 ## 泛化(generalization)

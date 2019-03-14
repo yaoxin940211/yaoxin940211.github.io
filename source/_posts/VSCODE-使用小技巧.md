@@ -3,7 +3,7 @@ title: '[VSCODE] 使用小技巧'
 date: 2019-03-14 21:22:00
 tags: [VSCode, Tips]
 ---
-[TOC]
+<!-- toc -->
 
 # VSCode使用小技巧
 <!--More-->

@@ -4,7 +4,7 @@ date: 2019-03-14 21:45:51
 tags: Git
 categories: Git使用
 ---
-[TOC]
+<!-- toc -->
 
 #Git常用命令
 <!--More-->

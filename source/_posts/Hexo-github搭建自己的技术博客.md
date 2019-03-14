@@ -5,16 +5,17 @@ updated: 2019-01-27 21:14:10
 tags: [blog, hexo]
 categories: Hexo使用教程
 ---
-# Hexo+github搭建自己的技术博客
+<!-- toc -->
 
-[TOC]
+# Hexo+github搭建自己的技术博客
+<!--More-->
 
 # 大致分以下几个步骤
 1. 环境搭建（node.js、git环境、gitHub账户)
 2. 安装和配置Hexo
 3. 将Hexo与github page联系起来
 4. 发表博文
-<!--More-->
+
 ## 环境搭建
 - node.js安装
 

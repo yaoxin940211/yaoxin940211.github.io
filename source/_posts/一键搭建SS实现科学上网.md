@@ -4,7 +4,7 @@ date: 2019-03-09 20:35:57
 tags: [SS, SSR]
 categories: 科学上网
 ---
-[TOC]
+<!-- toc -->
 
 # 搭建SS
 ## 下载一键搭建ss脚本
