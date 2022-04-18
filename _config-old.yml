@@ -6,7 +6,6 @@
 title: Mr.Yao's Blog
 subtitle: Do one thing and do it well.
 description: "Mr.Yao个人站点"
-keywords:
 author: Mr.Yao
 language: zh-Hans
 timezone:
@@ -15,7 +14,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yaoxinsir.site
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :category/:title/
 permalink_defaults:
 
 # Directory
@@ -32,15 +31,15 @@ skip_render:
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link:
-  enabled: true
+external_link: 
+  enabled: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: false
+  enable: true
   line_number: true
   auto_detect: false
   tab_replace:
@@ -74,34 +73,11 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: ayer
-
-server:
-  compress: true # 开启压缩
-
-# Uncomment the tag & add url to show the link you want to show
-socialmedia:
-  # Instagram: 
-  # Twitter: 
-  # Weibo: 
-  # GitHub: 
-  # Facebook: 
-  # ZhiHu: 
-  # LinkedIn: 
-  # Skype: 
-  # CodeSandBox: 
-  # CodePen: 
-  # Sketch: 
-  # Gitlab: 
-  # Dribble:
-  # Reddit:
-  # YouTube: 
-  # QQ: 
-  # WeChat: 
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy: 
+deploy:
   type: git
   repo: git@github.com:yaoxin940211/yaoxin940211.github.io.git
   branch: master
@@ -111,7 +87,6 @@ avatar: /images/avatar.jpg
 search:
   path: search.xml
   field: post
-  content: true
   format: html
   limit: 10000
 
@@ -119,11 +94,3 @@ archive_generator:
   per_page: 20
   yearly: true
   monthly: true
-
-# stylesheets loaded in the <head>
-stylesheets:
-- /css/style.css
-
-# scripts loaded in the end of the body
-scripts:
-- /js/style.js
