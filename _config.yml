@@ -119,11 +119,3 @@ archive_generator:
   per_page: 20
   yearly: true
   monthly: true
-
-# stylesheets loaded in the <head>
-stylesheets:
-- /css/style.css
-
-# scripts loaded in the end of the body
-scripts:
-- /js/style.js

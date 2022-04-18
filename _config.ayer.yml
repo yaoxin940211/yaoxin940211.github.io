@@ -5,7 +5,7 @@ menu:
   分类: /categories
   标签: /tags
   # 旅行: /tags/旅行/
-  # 友链: /friends
+  友链: /friends
   关于我: /about
 
 # 站点次标题和打字动效
@@ -185,29 +185,41 @@ friends_link:
     #网站图片(可忽略不写)
     img: /images/ayer.png
   GitHub:
-    url: https://github.com/Shen-Yu
+    url: https://github.com/yaoxin940211
     img: /images/github.png
-  码云:
-    url: https://gitee.com/shen-yu
-    img: /images/gitee.png
+  # 码云:
+  #   url: https://gitee.com/shen-yu
+  #   img: /images/gitee.png
   Hexo官网:
     url: https://hexo.io
     img: /images/hexo.png
   Hexo图表插件:
     url: https://github.com/Shen-Yu/hexo-tag-chart
     img: /images/hexo-tag-chart.png
+  雨松MOMO:
+    url: https://www.xuanyusong.com
+    img: /images/yusong.png
+  冯乐乐:
+    url: http://candycat1992.github.io/
+    img: /images/lele.png
+  阮一峰:
+    url: https://www.ruanyifeng.com/
+    img: /images/ruanyifeng.png
+  廖雪峰:
+    url: https://www.liaoxuefeng.com/
+    img: /images/liaoxuefeng.png
 
 # 评论：1、Valine(推荐)；2、Gitalk；3、Twikoo; 4.MiniValine
 
 # 1、Valine[一款快速、简洁且高效的无后端评论系统](https://github.com/xCss/Valine)
 # 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可
 leancloud:
-  enable: false
-  app_id: #
-  app_key: #
+  enable: true
+  app_id: 56PRFrE99XIs9fRbB48l2FK7-gzGzoHsz
+  app_key: legtJ7vYL4K55pnSNLPmQnQx
 # Valine配置
 valine:
-  enable: false # 是否启用
+  enable: true # 是否启用
   avatar: monsterid # 头像样式(https://valine.js.org/avatar.html)
   placeholder: 给我的文章加点评论吧~ # placeholder
 
