@@ -39,7 +39,7 @@ categories: Hexo使用教程
 
 - 新建一个空文件夹，依次输入以下命令
 
-	> npm install hexo
+	> npm install -g hexo-cli
 	> hexo init(首次才需要)
 	> npm install
 	> npm install hexo-deployer-git --save
