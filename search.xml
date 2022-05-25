@@ -607,9 +607,19 @@ pause
   <entry>
     <title>饥荒服务器搭建</title>
     <url>/2022/05/25/%E9%A5%A5%E8%8D%92%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><ol>
+    <content><![CDATA[<!-- toc -->
+
+<ul>
+<li><a href="#windows">Windows</a></li>
+<li><a href="#linux">Linux</a></li>
+<li><a href="#---">参考：</a></li>
+</ul>
+<!-- tocstop -->
+
+<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><ol>
 <li>下载开服程序</li>
 </ol>
+<span id="more"></span>
 <p>方法一：Steam内安装Dont’t Starve Together Dedicated Server<br>[图片]</p>
 <p>方法二：steamcmd (推荐)</p>
 <ul>
