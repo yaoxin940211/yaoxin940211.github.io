@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="Mr.Yao个人站点" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> Mr.Yao&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover3.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">Mr.Yao&#39;s Blog</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['螃蟹在剥我的壳，笔记本在写我', '漫天的我落在枫叶雪花上', '而你在想我'],
+        startDelay: 0,
+        typeSpeed: 100,
+        loop: true,
+        backSpeed: 50,
+        showCursor: false
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  <ul class="ads">
+    
+        <li>
+            <a href="">
+                <img src="" width="" alt="">
+            </a>
+        </li>
+    
+</ul>
+  
+  
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-饥荒服务器搭建"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/05/25/%E9%A5%A5%E8%8D%92%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"
+    >饥荒服务器搭建</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/05/25/%E9%A5%A5%E8%8D%92%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" class="article-date">
+  <time datetime="2022-05-25T15:25:38.000Z" itemprop="datePublished">2022-05-25</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><ol>
+<li>下载开服程序</li>
+</ol>
+<p>方法一：Steam内安装Dont’t Starve Together Dedicated Server<br>[图片]</p>
+<p>方法二：steamcmd (推荐)</p>
+<ul>
+<li><a href="%22https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip%22">点击下载steamcmd</a></li>
+<li>解压出来后，双击steamcmd.exe<br>[图片]</li>
+<li>依次执行下述指令，下载dstds程序</li>
+</ul>
+<blockquote>
+<p>force_install_dir D:\dstds\</p>
+</blockquote>
+<blockquote>
+<p>login anonymous</p>
+</blockquote>
+<blockquote>
+<p>app_update 343050 validate<br>[图片]</p>
+</blockquote>
+<ul>
+<li>输入quit指令或直接点击关闭按钮退出steamcmd</li>
+</ul>
+<p><code>后续如果需要更新dstds，重复第3步</code></p>
+<ol start="2">
+<li>获取令牌</li>
+</ol>
+<p>方法1：访问KLEI官网<br>[图片]</p>
+<p>方法二：启动饥荒联机版（以下简称“DST”）， 按~键调出控制台，执行指令：TheNet:GenerateClusterToken()</p>
+<p>令牌生成路径在%userprofile%\Documents\Klei\DoNotStarveTogether\用户id\cluster_token.txt</p>
+<ol start="3">
+<li>配置服务器</li>
+</ol>
+<p>默认配置文件：%userprofile%\Documents\Klei\DoNotStarveTogether\Cluster_1\</p>
+<ul>
+<li>复制任意存档目录Cluster_x到配置文件路径</li>
+<li>添加令牌文件：将之前生成的令牌文件复制到配置文件路径</li>
+<li>添加管理员(可选)：新建adminlist.txt文件，将用户ID（KU_开头）写入该文件，一行一个</li>
+<li>服务器配置说明：文件名 cluster.ini<br>[图片]<br>最终目录结构如下图：<br>[图片]</li>
+<li>MOD配置: <ul>
+<li>打开D:\dstds\mods\dedicated_server_mods_setup.lua文件，将需要的MOD按行写入<br>[图片]</li>
+</ul>
+</li>
+<li>打开modoverrides.lua配置MOD<br>[图片]</li>
+</ul>
+<ol start="4">
+<li>启动dstds</li>
+</ol>
+<p>打开 “D:\dstds\bin64&quot; 目录，双击 dontstarve_dedicated_server_nullrenderer_x64.exe 即可。<br>32位的系统 则找到是 “D:\dstds\bin&quot;，然后双击 dontstarve_dedicated_server_nullrenderer.exe 启动</p>
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p>系统环境：CentOS 8</p>
+<ol>
+<li>指令汇总</li>
+</ol>
+<ul>
+<li>安装依赖库</li>
+</ul>
+<blockquote>
+<p>yum install glibc.i686</p>
+</blockquote>
+<blockquote>
+<p>yum update -y libstdc++.x86_64</p>
+</blockquote>
+<blockquote>
+<p>yum install libstdc++.i686</p>
+</blockquote>
+<blockquote>
+<p>yum install libcurl.i686</p>
+</blockquote>
+<blockquote>
+<p>cd &#x2F;usr&#x2F;lib</p>
+</blockquote>
+<blockquote>
+<p>ln -s libcurl.so.4 libcurl-gnutls.so.4</p>
+</blockquote>
+<ul>
+<li>安装screen</li>
+</ul>
+<blockquote>
+<p>yum install screen</p>
+</blockquote>
+<ul>
+<li>下载安装 steamcmd</li>
+</ul>
+<blockquote>
+<p>mkdir ~&#x2F;steamcmd</p>
+</blockquote>
+<blockquote>
+<p>cd ~&#x2F;steamcmd</p>
+</blockquote>
+<blockquote>
+<p>wget <a target="_blank" rel="noopener" href="https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz">https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz</a></p>
+</blockquote>
+<blockquote>
+<p>tar -xvzf steamcmd_linux.tar.gz</p>
+</blockquote>
+<ul>
+<li>下载 开服程序</li>
+</ul>
+<blockquote>
+<p>.&#x2F;steamcmd.sh</p>
+</blockquote>
+<blockquote>
+<p>force_install_dir ~&#x2F;dst&#x2F;dst_client</p>
+</blockquote>
+<blockquote>
+<p>login anonymous</p>
+</blockquote>
+<blockquote>
+<p>app_update 343050 validate</p>
+</blockquote>
+<blockquote>
+<p>quit</p>
+</blockquote>
+<ul>
+<li>启动 开服程序</li>
+</ul>
+<blockquote>
+<p>~&#x2F;dst&#x2F;dst_client&#x2F;bin&#x2F;dontstarve_dedicated_server_nullrenderer</p>
+</blockquote>
+<ul>
+<li><p>自动化脚本</p>
+<ul>
+<li>启动脚本</li>
+</ul>
+</li>
+</ul>
+<p>vim .&#x2F;startDST.sh</p>
+<p>粘贴下面内容：</p>
+<pre><code class="shell">#!/bin/bash
+
+steamcmd_dir=&quot;$HOME/steamcmd&quot;
+install_dir=&quot;$HOME/dst/dst_client&quot;
+cluster_name=&quot;Cluster_1&quot;
+dontstarve_dir=&quot;$HOME/Documents/Klei/DoNotStarveTogether&quot;
+
+function fail()
+&#123;
+        echo Error: &quot;$@&quot; &gt;&amp;2
+        exit 1
+&#125;
+
+function check_for_file()
+&#123;
+        if [ ! -e &quot;$1&quot; ]; then
+                fail &quot;Missing file: $1&quot;
+        fi
+&#125;
+
+cd &quot;$steamcmd_dir&quot; || fail &quot;Missing $steamcmd_dir directory!&quot;
+
+check_for_file &quot;steamcmd.sh&quot;
+check_for_file &quot;$dontstarve_dir/$cluster_name/cluster.ini&quot;
+check_for_file &quot;$dontstarve_dir/$cluster_name/cluster_token.txt&quot;
+check_for_file &quot;$dontstarve_dir/$cluster_name/Master/server.ini&quot;
+check_for_file &quot;$dontstarve_dir/$cluster_name/Caves/server.ini&quot;
+
+./steamcmd.sh +force_install_dir &quot;$install_dir&quot; +login anonymous +app_update 343050 validate +quit
+
+check_for_file &quot;$install_dir/dontstarve_dedicated_server_nullrenderer.app/Contents/MacOS/&quot;
+
+cd &quot;$install_dir/dontstarve_dedicated_server_nullrenderer.app/Contents/Resources/&quot; || fail
+
+run_shared=(../MacOS/dontstarve_dedicated_server_nullrenderer)
+run_shared+=(-console)
+run_shared+=(-cluster &quot;$cluster_name&quot;)
+run_shared+=(-monitor_parent_process $$)
+
+&quot;$&#123;run_shared[@]&#125;&quot; -shard Caves  | sed &#39;s/^/Caves:  /&#39; &amp;
+&quot;$&#123;run_shared[@]&#125;&quot; -shard Master | sed &#39;s/^/Master: /&#39;
+</code></pre>
+<ul>
+<li>更新脚本</li>
+</ul>
+<p>vim .&#x2F;updateDST.sh</p>
+<ul>
+<li>粘贴下面内容：</li>
+</ul>
+<pre><code class="shell">#!/bin/bash
+# 获得本sh所在目录
+sh_path=$(cd `dirname $0`; pwd)
+
+cmdDir=~/steamcmd/
+dstDir=~/dst/dst_client/
+
+&quot;$cmdDir&quot;steamcmd.sh \
+    +force_install_dir &quot;$dstDir&quot; \
+    +login anonymous \
+    +app_update 343050 validate  \
+    +quit
+</code></pre>
+<ul>
+<li><p>设置脚本为可执行</p>
+<pre><code class="shell">chmod +x ./startDST.sh
+chmod +x ./updateDST.sh
+</code></pre>
+</li>
+<li><p>screen基本用法</p>
+<ul>
+<li>创建 名为dst的会话</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>screen -S dst</p>
+</blockquote>
+<ul>
+<li><p>恢复 名为dst的会话</p>
+<blockquote>
+<p>screen -r dst</p>
+</blockquote>
+</li>
+<li><p>跳出会话(不关闭)，或者 按住ctrl + a 然后再按 d</p>
+<blockquote>
+<p>screen -d dst</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>有时 SSH意外断开，screen会话被占用<br>使用 screen -r dst，会提示 [screen is terminating]<br>可以使用 screen -d dst 来断开<br>然后重新 screen -r dst 来恢复会话</p>
+</blockquote>
+<ul>
+<li>在主会话中关闭子会话<blockquote>
+<p>screen -X -S dst quit</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><p><a href="%22https://developer.valvesoftware.com/wiki/SteamCMD#macOS%22">SteamCMD - Valve Developer Community</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-Git常用命令"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/03/14/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"
+    >Git常用命令</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2019/03/14/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time datetime="2019-03-14T13:45:51.000Z" itemprop="datePublished">2019-03-14</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Git%E4%BD%BF%E7%94%A8/">Git使用</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <!-- toc -->
+
+<ul>
+<li><a href="#----">分支操作</a></li>
+</ul>
+<!-- tocstop -->
+
+<p>#Git常用命令</p> 
+      <a class="article-more-link" href="/2019/03/14/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-Unity小技巧"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/03/14/Unity%E5%B0%8F%E6%8A%80%E5%B7%A7/"
+    >Unity小技巧</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2019/03/14/Unity%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="article-date">
+  <time datetime="2019-03-14T13:39:22.000Z" itemprop="datePublished">2019-03-14</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Unity/">Unity</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <!-- toc -->
+
+<ul>
+<li><a href="#unity---">Unity小技巧</a><ul>
+<li><a href="#------unity-profiler">安卓手机连接Unity Profiler</a></li>
+<li><a href="#--------">文件默认打开方式</a></li>
+<li><a href="#------">脚本生命周期</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="Unity小技巧"><a href="#Unity小技巧" class="headerlink" title="Unity小技巧"></a>Unity小技巧</h1> 
+      <a class="article-more-link" href="/2019/03/14/Unity%E5%B0%8F%E6%8A%80%E5%B7%A7/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tips/" rel="tag">Tips</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity/" rel="tag">Unity</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-常用批处理代码段"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/03/14/%E5%B8%B8%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E4%BB%A3%E7%A0%81%E6%AE%B5/"
+    >常用批处理代码段</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2019/03/14/%E5%B8%B8%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E4%BB%A3%E7%A0%81%E6%AE%B5/" class="article-date">
+  <time datetime="2019-03-14T13:27:33.000Z" itemprop="datePublished">2019-03-14</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%89%B9%E5%A4%84%E7%90%86/">批处理</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <!-- toc -->
+
+<ul>
+<li><a href="#--------">常用批处理代码段</a><ul>
+<li><a href="#-------------">监测程序是否运行并自动启动</a></li>
+<li><a href="#--------------">打开资源管理器并选中某个文件</a></li>
+<li><a href="#---------">自动获取管理员权限</a></li>
+<li><a href="#--------">查找应该安装路径</a></li>
+<li><a href="#-----">获取用户名</a></li>
+<li><a href="#--cpl--">常见cpl文件</a></li>
+<li><a href="#----">路径扩展</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="常用批处理代码段"><a href="#常用批处理代码段" class="headerlink" title="常用批处理代码段"></a>常用批处理代码段</h1> 
+      <a class="article-more-link" href="/2019/03/14/%E5%B8%B8%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E4%BB%A3%E7%A0%81%E6%AE%B5/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bat/" rel="tag">bat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" rel="tag">批处理</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-VSCODE-使用小技巧"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/03/14/VSCODE-%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/"
+    >[VSCODE] 使用小技巧</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2019/03/14/VSCODE-%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="article-date">
+  <time datetime="2019-03-14T13:22:00.000Z" itemprop="datePublished">2019-03-14</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <!-- toc -->
+
+<ul>
+<li><a href="#vscode-----">VSCode使用小技巧</a><ul>
+<li><a href="#-python-lua--region--">给python和lua增加region功能</a><ul>
+<li><a href="#python">python</a></li>
+<li><a href="#lua">lua</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="VSCode使用小技巧"><a href="#VSCode使用小技巧" class="headerlink" title="VSCode使用小技巧"></a>VSCode使用小技巧</h1> 
+      <a class="article-more-link" href="/2019/03/14/VSCODE-%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tips/" rel="tag">Tips</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VSCode/" rel="tag">VSCode</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-UML类图关系"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/03/14/UML%E7%B1%BB%E5%9B%BE%E5%85%B3%E7%B3%BB/"
+    >UML类图关系</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2019/03/14/UML%E7%B1%BB%E5%9B%BE%E5%85%B3%E7%B3%BB/" class="article-date">
+  <time datetime="2019-03-14T13:20:13.000Z" itemprop="datePublished">2019-03-14</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <!-- toc -->
+
+<ul>
+<li><a href="#----">类图关系</a><ul>
+<li><a href="#---generalization-">泛化(generalization)</a></li>
+<li><a href="#---realize-">实现(realize)</a></li>
+<li><a href="#---aggregation-">聚合(aggregation)</a></li>
+<li><a href="#---composition-">组合(composition)</a></li>
+<li><a href="#---association-">关联(association)</a></li>
+<li><a href="#---dependency-">依赖(dependency)</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="类图关系"><a href="#类图关系" class="headerlink" title="类图关系"></a>类图关系</h1> 
+      <a class="article-more-link" href="/2019/03/14/UML%E7%B1%BB%E5%9B%BE%E5%85%B3%E7%B3%BB/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UML/" rel="tag">UML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-一键搭建SS实现科学上网"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/03/09/%E4%B8%80%E9%94%AE%E6%90%AD%E5%BB%BASS%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"
+    >一键搭建SS实现科学上网</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2019/03/09/%E4%B8%80%E9%94%AE%E6%90%AD%E5%BB%BASS%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" class="article-date">
+  <time datetime="2019-03-09T12:35:57.000Z" itemprop="datePublished">2019-03-09</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <!-- toc -->
+
+<ul>
+<li><a href="#--ss">搭建SS</a><ul>
+<li><a href="#------ss--">下载一键搭建ss脚本</a></li>
+<li><a href="#------">运行搭建脚本</a></li>
+<li><a href="#--ss--">相关ss操作</a></li>
+</ul>
+</li>
+<li><a href="#--bbr--">开启BBR加速</a><ul>
+<li><a href="#--bbr--">开启BBR加速</a></li>
+</ul>
+</li>
+<li><a href="#shadowsocksjson--">shadowsocks.json配置</a><ul>
+<li><a href="#-----">单用户配置</a></li>
+<li><a href="#-----">多用户配置</a></li>
+</ul>
+</li>
+<li><a href="#--ssr">搭建SSR</a><ul>
+<li><a href="#------ssr--">下载一键搭建ssr脚本</a></li>
+<li><a href="#------">运行搭建脚本</a></li>
+<li><a href="#------">输入相关参数</a></li>
+<li><a href="#--ssr--">相关ssr操作</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="搭建SS"><a href="#搭建SS" class="headerlink" title="搭建SS"></a>搭建SS</h1><h2 id="下载一键搭建ss脚本"><a href="#下载一键搭建ss脚本" class="headerlink" title="下载一键搭建ss脚本"></a>下载一键搭建ss脚本</h2><pre><code>git clone https://github.com/flyzy2005/ss-fly
+
+git安装
+Centos： yum -y install git
+Ubuntu/Debian： apt-get -y install git
+</code></pre> 
+      <a class="article-more-link" href="/2019/03/09/%E4%B8%80%E9%94%AE%E6%90%AD%E5%BB%BASS%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SS/" rel="tag">SS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSR/" rel="tag">SSR</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-CentOS7-搭建Git服务器"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/09/17/CentOS7-%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/"
+    >CentOS7 搭建Git服务器</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/09/17/CentOS7-%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="article-date">
+  <time datetime="2017-09-17T09:03:00.000Z" itemprop="datePublished">2017-09-17</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h1><p><code>yum -y install git</code></p>
+<h1 id="查看Git版本"><a href="#查看Git版本" class="headerlink" title="查看Git版本"></a>查看Git版本</h1><p><code>git --version</code></p> 
+      <a class="article-more-link" href="/2017/09/17/CentOS7-%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-Hexo-github搭建自己的技术博客"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/09/13/Hexo-github%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/"
+    >Hexo+github搭建自己的技术博客</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/09/13/Hexo-github%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time datetime="2017-09-12T17:27:51.000Z" itemprop="datePublished">2017-09-13</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">Hexo使用教程</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <!-- toc -->
+
+<ul>
+<li><a href="#hexo-github---------">Hexo+github搭建自己的技术博客</a></li>
+<li><a href="#---------">大致分以下几个步骤</a><ul>
+<li><a href="#----">环境搭建</a></li>
+<li><a href="#--hexo">安装Hexo</a></li>
+<li><a href="#--git----">配置git个人信息</a></li>
+<li><a href="#---configyml">配置_config.yml</a></li>
+<li><a href="#----">发布博文</a></li>
+<li><a href="#--next--">下载next主题</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="Hexo-github搭建自己的技术博客"><a href="#Hexo-github搭建自己的技术博客" class="headerlink" title="Hexo+github搭建自己的技术博客"></a>Hexo+github搭建自己的技术博客</h1> 
+      <a class="article-more-link" href="/2017/09/13/Hexo-github%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+  </article>
+  
+
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022
+        <i class="ri-heart-fill heart_icon"></i> Mr.Yao
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/avatar.jpg" alt="Mr.Yao&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.png">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechatpay.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

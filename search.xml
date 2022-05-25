@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>CentOS7 搭建Git服务器</title>
+    <url>/2017/09/17/CentOS7-%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h1><p><code>yum -y install git</code></p>
+<h1 id="查看Git版本"><a href="#查看Git版本" class="headerlink" title="查看Git版本"></a>查看Git版本</h1><p><code>git --version</code></p>
+<span id="more"></span>
+<h1 id="创建Git目录和一个空的Git仓库"><a href="#创建Git目录和一个空的Git仓库" class="headerlink" title="创建Git目录和一个空的Git仓库"></a>创建Git目录和一个空的Git仓库</h1><blockquote>
+<p>cd &#x2F;<br>mkdir git<br>cd git<br>git init –bare test.git<br>chown -R git:git test.git</p>
+</blockquote>
+<blockquote>
+<p>一个简单的Git服务器就搭建完成了</p>
+</blockquote>
+<h1 id="Windows下运行git-bash"><a href="#Windows下运行git-bash" class="headerlink" title="Windows下运行git bash"></a>Windows下运行git bash</h1><blockquote>
+<p>git clone git@ip:&#x2F;git&#x2F;test.git<br>cd test<br>git remote -v</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>Git常用命令</title>
+    <url>/2019/03/14/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<!-- toc -->
+
+<ul>
+<li><a href="#----">分支操作</a></li>
+</ul>
+<!-- tocstop -->
+
+<p>#Git常用命令</p>
+<span id="more"></span>
+<h2 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h2><pre><code>查看远程分支: git branch -r
+查看本地分支: git branch
+查看所有分支: git branch -a
+删除本地分支: git branch -d &lt;BranchName&gt;
+删除远程分支: 1. git branch -r -d origin/&lt;BranchName&gt;
+             2. git push origin (空格):&lt;BranchName&gt;
+             或 git push origin --delete &lt;BranchName&gt;
+</code></pre>
+]]></content>
+      <categories>
+        <category>Git使用</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo+github搭建自己的技术博客</title>
+    <url>/2017/09/13/Hexo-github%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<!-- toc -->
+
+<ul>
+<li><a href="#hexo-github---------">Hexo+github搭建自己的技术博客</a></li>
+<li><a href="#---------">大致分以下几个步骤</a><ul>
+<li><a href="#----">环境搭建</a></li>
+<li><a href="#--hexo">安装Hexo</a></li>
+<li><a href="#--git----">配置git个人信息</a></li>
+<li><a href="#---configyml">配置_config.yml</a></li>
+<li><a href="#----">发布博文</a></li>
+<li><a href="#--next--">下载next主题</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="Hexo-github搭建自己的技术博客"><a href="#Hexo-github搭建自己的技术博客" class="headerlink" title="Hexo+github搭建自己的技术博客"></a>Hexo+github搭建自己的技术博客</h1><span id="more"></span>
+
+<h1 id="大致分以下几个步骤"><a href="#大致分以下几个步骤" class="headerlink" title="大致分以下几个步骤"></a>大致分以下几个步骤</h1><ol>
+<li>环境搭建（node.js、git环境、gitHub账户)</li>
+<li>安装和配置Hexo</li>
+<li>将Hexo与github page联系起来</li>
+<li>发表博文</li>
+</ol>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><ul>
+<li>node.js安装</li>
+</ul>
+<p><a href="https://nodejs.org/en/" title="node官网">node-downloads</a></p>
+<blockquote>
+<p>node -v</p>
+</blockquote>
+<blockquote>
+<p>npm -v</p>
+</blockquote>
+<ul>
+<li>git安装</li>
+</ul>
+<p><a href="https://git-scm.com/downloads" title="GIT官网下载">git-downloads</a></p>
+<blockquote>
+<p>git –version</p>
+</blockquote>
+<ul>
+<li>gitHub账户</li>
+</ul>
+<p>注册完成以后，新建代码库， 命名为 yourname.github.io</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><ul>
+<li><p>新建一个空文件夹，依次输入以下命令</p>
+<blockquote>
+<p>npm install -g hexo-cli<br>hexo init(首次才需要)<br>npm install<br>npm install hexo-deployer-git –save</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="配置git个人信息"><a href="#配置git个人信息" class="headerlink" title="配置git个人信息"></a>配置git个人信息</h2><ol>
+<li><p>设置git的username和email</p>
+<blockquote>
+<p>git config –global user.name “yaoxin940211”<br>git config –global user.email “<a href="mailto:&#x37;&#x36;&#53;&#x30;&#55;&#54;&#x30;&#x33;&#53;&#64;&#113;&#x71;&#46;&#x63;&#111;&#x6d;">&#x37;&#x36;&#53;&#x30;&#55;&#54;&#x30;&#x33;&#53;&#64;&#113;&#x71;&#46;&#x63;&#111;&#x6d;</a>“</p>
+</blockquote>
+</li>
+<li><p>生成密钥</p>
+<blockquote>
+<p>ssh-keygen -t rsa -C “<a href="mailto:&#55;&#54;&#53;&#x30;&#55;&#54;&#x30;&#x33;&#53;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;">&#55;&#54;&#53;&#x30;&#55;&#54;&#x30;&#x33;&#53;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;</a>“</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h2><pre><code>deploy:
+  type: git
+  repo: git@github.com:yaoxin940211/yaoxin940211.github.io.git
+  branch: master
+</code></pre>
+<h2 id="发布博文"><a href="#发布博文" class="headerlink" title="发布博文"></a>发布博文</h2><blockquote>
+<p>hexo new post “title” 或者 hexo n “title”</p>
+</blockquote>
+<blockquote>
+<p>hexo g &#x2F;&#x2F;生成<br>hexo d &#x2F;&#x2F;部署</p>
+</blockquote>
+<blockquote>
+<p>hexo g -d &#x2F;&#x2F;生成+部署</p>
+</blockquote>
+<h2 id="下载next主题"><a href="#下载next主题" class="headerlink" title="下载next主题"></a>下载next主题</h2><blockquote>
+<p>git clone <a href="https://github.com/iissnan/hexo-theme-next">https://github.com/iissnan/hexo-theme-next</a> themes&#x2F;next</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Hexo使用教程</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>UML类图关系</title>
+    <url>/2019/03/14/UML%E7%B1%BB%E5%9B%BE%E5%85%B3%E7%B3%BB/</url>
+    <content><![CDATA[<!-- toc -->
+
+<ul>
+<li><a href="#----">类图关系</a><ul>
+<li><a href="#---generalization-">泛化(generalization)</a></li>
+<li><a href="#---realize-">实现(realize)</a></li>
+<li><a href="#---aggregation-">聚合(aggregation)</a></li>
+<li><a href="#---composition-">组合(composition)</a></li>
+<li><a href="#---association-">关联(association)</a></li>
+<li><a href="#---dependency-">依赖(dependency)</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="类图关系"><a href="#类图关系" class="headerlink" title="类图关系"></a>类图关系</h1><span id="more"></span>
+<p><span id="top"></span><br><a href="#end">End</a></p>
+<p><img src="http://ww1.sinaimg.cn/large/006Q2Ktwgy1g0ztrhovk1j30ns0bj0t8.jpg" alt="UML类图" title="UML类图"></p>
+<h2 id="泛化-generalization"><a href="#泛化-generalization" class="headerlink" title="泛化(generalization)"></a>泛化(generalization)</h2><p><img src="http://ww1.sinaimg.cn/large/006Q2Ktwgy1g0ztwk4zhbj308a036t8k.jpg" alt="generalization" title="泛化"></p>
+<ul>
+<li>继承非抽象类</li>
+</ul>
+<h2 id="实现-realize"><a href="#实现-realize" class="headerlink" title="实现(realize)"></a>实现(realize)</h2><p><img src="http://ww1.sinaimg.cn/large/006Q2Ktwgy1g0ztwqshhhj309407hmx6.jpg" alt="realize" title="实现"></p>
+<ul>
+<li>继承抽象类，实现接口</li>
+</ul>
+<h2 id="聚合-aggregation"><a href="#聚合-aggregation" class="headerlink" title="聚合(aggregation)"></a>聚合(aggregation)</h2><p><img src="http://ww1.sinaimg.cn/large/006Q2Ktwgy1g0ztwxhebwj307o02vq2s.jpg" alt="aggregation" title="聚合"></p>
+<ul>
+<li>构造函数中包含另一个<strong>类的实例作为参数</strong></li>
+<li>客户端<strong>同时了解两个类</strong>，因为他们是独立的</li>
+</ul>
+<h2 id="组合-composition"><a href="#组合-composition" class="headerlink" title="组合(composition)"></a>组合(composition)</h2><p><img src="http://ww1.sinaimg.cn/large/006Q2Ktwgy1g0ztx11obkj307t02tmx0.jpg" alt="composition" title="组合"></p>
+<ul>
+<li>构造函数包含另一个<strong>类的实例化</strong>，两者紧密耦合在一起</li>
+<li>客户端中<strong>只认识类B</strong>,因为类A被严密地封装在类B中</li>
+</ul>
+<h2 id="关联-association"><a href="#关联-association" class="headerlink" title="关联(association)"></a>关联(association)</h2><p><img src="http://ww1.sinaimg.cn/large/006Q2Ktwgy1g0ztx5q1lhj308903aq2s.jpg" alt="association" title="关联"></p>
+<ul>
+<li>成员变量，类B是类A的属性</li>
+</ul>
+<h2 id="依赖-dependency"><a href="#依赖-dependency" class="headerlink" title="依赖(dependency)"></a>依赖(dependency)</h2><p><img src="http://ww1.sinaimg.cn/large/006Q2Ktwgy1g0ztx8yn3rj3086035t8k.jpg" alt="dependency" title="依赖"></p>
+<ul>
+<li>类B是Public的, 类A可以调用它</li>
+<li>类B是类A中某个方法的局部变量（持有类B的是类A的一个方法，而不是类A自身）</li>
+<li>类B是类A某个方法的参数或返回值</li>
+</ul>
+<p><span id = "end"></span><br><a href="#top">Top</a></p>
+]]></content>
+      <tags>
+        <tag>UML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unity小技巧</title>
+    <url>/2019/03/14/Unity%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<!-- toc -->
+
+<ul>
+<li><a href="#unity---">Unity小技巧</a><ul>
+<li><a href="#------unity-profiler">安卓手机连接Unity Profiler</a></li>
+<li><a href="#--------">文件默认打开方式</a></li>
+<li><a href="#------">脚本生命周期</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="Unity小技巧"><a href="#Unity小技巧" class="headerlink" title="Unity小技巧"></a>Unity小技巧</h1><span id="more"></span>
+<h2 id="安卓手机连接Unity-Profiler"><a href="#安卓手机连接Unity-Profiler" class="headerlink" title="安卓手机连接Unity Profiler"></a>安卓手机连接Unity Profiler</h2><blockquote>
+<p>adb forward tcp:54999 localabstract:Unity-com.tencent.tmgp.ztj</p>
+</blockquote>
+<h2 id="文件默认打开方式"><a href="#文件默认打开方式" class="headerlink" title="文件默认打开方式"></a>文件默认打开方式</h2><pre><code class="C#">#if UNITY_EDITOR
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.Callbacks;
+using UnityEngine;
+
+public class OpenFileEx &#123;
+
+    [OnOpenAsset]
+    public static bool OpenShaderAsset(int instanceID, int line)
+    &#123;
+        if (EditorUtility.InstanceIDToObject(instanceID) is Shader)
+        &#123;
+            string assetPath = AssetDatabase.GetAssetPath(instanceID);
+            System.Diagnostics.Process.Start(Application.dataPath + &quot;/../&quot; + assetPath);
+            return true;
+        &#125;
+        return false;
+    &#125;
+&#125;
+#endif
+</code></pre>
+<h2 id="脚本生命周期"><a href="#脚本生命周期" class="headerlink" title="脚本生命周期"></a>脚本生命周期</h2><p><img src="http://ww1.sinaimg.cn/large/006Q2Ktwly1g12npt63m5j30sl13yad2.jpg" alt="Unity脚本生命周期"></p>
+]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>Unity</tag>
+        <tag>Tips</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[VSCODE] 使用小技巧</title>
+    <url>/2019/03/14/VSCODE-%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<!-- toc -->
+
+<ul>
+<li><a href="#vscode-----">VSCode使用小技巧</a><ul>
+<li><a href="#-python-lua--region--">给python和lua增加region功能</a><ul>
+<li><a href="#python">python</a></li>
+<li><a href="#lua">lua</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="VSCode使用小技巧"><a href="#VSCode使用小技巧" class="headerlink" title="VSCode使用小技巧"></a>VSCode使用小技巧</h1><span id="more"></span>
+<h2 id="给python和lua增加region功能"><a href="#给python和lua增加region功能" class="headerlink" title="给python和lua增加region功能"></a>给python和lua增加region功能</h2><blockquote>
+<p>打开D:\Program Files\Microsoft VS Code\resources\app\extensions, 把路径改为自己的，打开 python 和 lua 目录，修改其中的 language-configuration.json 文件，在配置文件最后加上如下代码</p>
+</blockquote>
+<h3 id="python"><a href="#python" class="headerlink" title="python"></a>python</h3><pre><code>&quot;folding&quot;: &#123;
+    &quot;offSide&quot;: true,
+    &quot;markers&quot;: &#123;
+        &quot;start&quot;: &quot;^\\s*#\\s*region\\b&quot;,
+        &quot;end&quot;: &quot;^\\s*#\\s*endregion\\b&quot;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="lua"><a href="#lua" class="headerlink" title="lua"></a>lua</h3><pre><code>&quot;folding&quot;: &#123;
+    &quot;offSide&quot;: true,
+    &quot;markers&quot;: &#123;
+        &quot;start&quot;: &quot;^\\s*--\\s*region\\b&quot;,
+        &quot;end&quot;: &quot;^\\s*--\\s*endregion\\b&quot;
+    &#125;
+&#125;
+</code></pre>
+<blockquote>
+<p>改完后记得要重启vscode才会生效</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>Tips</tag>
+        <tag>VSCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一键搭建SS实现科学上网</title>
+    <url>/2019/03/09/%E4%B8%80%E9%94%AE%E6%90%AD%E5%BB%BASS%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</url>
+    <content><![CDATA[<!-- toc -->
+
+<ul>
+<li><a href="#--ss">搭建SS</a><ul>
+<li><a href="#------ss--">下载一键搭建ss脚本</a></li>
+<li><a href="#------">运行搭建脚本</a></li>
+<li><a href="#--ss--">相关ss操作</a></li>
+</ul>
+</li>
+<li><a href="#--bbr--">开启BBR加速</a><ul>
+<li><a href="#--bbr--">开启BBR加速</a></li>
+</ul>
+</li>
+<li><a href="#shadowsocksjson--">shadowsocks.json配置</a><ul>
+<li><a href="#-----">单用户配置</a></li>
+<li><a href="#-----">多用户配置</a></li>
+</ul>
+</li>
+<li><a href="#--ssr">搭建SSR</a><ul>
+<li><a href="#------ssr--">下载一键搭建ssr脚本</a></li>
+<li><a href="#------">运行搭建脚本</a></li>
+<li><a href="#------">输入相关参数</a></li>
+<li><a href="#--ssr--">相关ssr操作</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="搭建SS"><a href="#搭建SS" class="headerlink" title="搭建SS"></a>搭建SS</h1><h2 id="下载一键搭建ss脚本"><a href="#下载一键搭建ss脚本" class="headerlink" title="下载一键搭建ss脚本"></a>下载一键搭建ss脚本</h2><pre><code>git clone https://github.com/flyzy2005/ss-fly
+
+git安装
+Centos： yum -y install git
+Ubuntu/Debian： apt-get -y install git
+</code></pre>
+<span id="more"></span>
+<h2 id="运行搭建脚本"><a href="#运行搭建脚本" class="headerlink" title="运行搭建脚本"></a>运行搭建脚本</h2><pre><code>ss-fly/ss-fly.sh -i [passwd] [port]
+</code></pre>
+<h2 id="相关ss操作"><a href="#相关ss操作" class="headerlink" title="相关ss操作"></a>相关ss操作</h2><pre><code>修改配置文件：vim /etc/shadowsocks.json
+停止ss服务：ssserver -c /etc/shadowsocks.json -d stop
+启动ss服务：ssserver -c /etc/shadowsocks.json -d start
+重启ss服务：ssserver -c /etc/shadowsocks.json -d restart
+卸载ss服务：ss-fly/ss-fly.sh -uninstall
+</code></pre>
+<h1 id="开启BBR加速"><a href="#开启BBR加速" class="headerlink" title="开启BBR加速"></a>开启BBR加速</h1><h2 id="开启BBR加速-1"><a href="#开启BBR加速-1" class="headerlink" title="开启BBR加速"></a>开启BBR加速</h2><pre><code>ss-fly/ss-fly.sh -bbr
+
+
+验证加速是否开启成功
+sysctl net.ipv4.tcp_available_congestion_control
+如果返回值有bbr，说明开启成功
+net.ipv4.tcp_available_congestion_control = bbr cubic reno
+</code></pre>
+<hr>
+<h1 id="shadowsocks-json配置"><a href="#shadowsocks-json配置" class="headerlink" title="shadowsocks.json配置"></a>shadowsocks.json配置</h1><h2 id="单用户配置"><a href="#单用户配置" class="headerlink" title="单用户配置"></a>单用户配置</h2><pre><code>&#123;
+    &quot;server&quot;:&quot;0.0.0.0&quot;,
+    &quot;server_port&quot;:1024,
+    &quot;local_address&quot;: &quot;127.0.0.1&quot;,
+    &quot;local_port&quot;:1080,
+    &quot;password&quot;:&quot;mypassword&quot;,
+    &quot;timeout&quot;:300,
+    &quot;method&quot;:&quot;aes-256-cfb&quot;
+&#125;
+</code></pre>
+<h2 id="多用户配置"><a href="#多用户配置" class="headerlink" title="多用户配置"></a>多用户配置</h2><pre><code>&#123;
+    &quot;server&quot;:&quot;0.0.0.0&quot;,
+    &quot;local_address&quot;:&quot;127.0.0.1&quot;,
+    &quot;local_port&quot;:1080,
+    &quot;port_password&quot;:&#123;
+        &quot;1314&quot;:&quot;yaoxin&quot;,
+        &quot;1315&quot;:&quot;yaoxin&quot;,
+        &quot;1316&quot;:&quot;yaoxin&quot;,
+        &quot;1317&quot;:&quot;yaoxin&quot;,
+        &quot;2010&quot;:&quot;yaoxin&quot;,
+        &quot;2011&quot;:&quot;yaoxin&quot;,
+        &quot;2012&quot;:&quot;yaoxin&quot;,
+        &quot;2013&quot;:&quot;yaoxin&quot;,
+        &quot;2015&quot;:&quot;yaoxin&quot;,
+        &quot;3010&quot;:&quot;yaoxin&quot;,
+        &quot;3011&quot;:&quot;yaoxin&quot;
+    &#125;,
+    &quot;timeout&quot;:300,
+    &quot;method&quot;:&quot;aes-256-cfb&quot;,
+    &quot;fast_open&quot;:false
+&#125;
+</code></pre>
+<hr>
+<h1 id="搭建SSR"><a href="#搭建SSR" class="headerlink" title="搭建SSR"></a>搭建SSR</h1><blockquote>
+<p>如果要安装SSR，需要先卸载SS！！！</p>
+</blockquote>
+<h2 id="下载一键搭建ssr脚本"><a href="#下载一键搭建ssr脚本" class="headerlink" title="下载一键搭建ssr脚本"></a>下载一键搭建ssr脚本</h2><pre><code>git clone https://github.com/flyzy2005/ss-fly
+</code></pre>
+<h2 id="运行搭建脚本-1"><a href="#运行搭建脚本-1" class="headerlink" title="运行搭建脚本"></a>运行搭建脚本</h2><pre><code>ss-fly/ss-fly.sh -ssr
+</code></pre>
+<h2 id="输入相关参数"><a href="#输入相关参数" class="headerlink" title="输入相关参数"></a>输入相关参数</h2><h2 id="相关ssr操作"><a href="#相关ssr操作" class="headerlink" title="相关ssr操作"></a>相关ssr操作</h2><pre><code>启动：/etc/init.d/shadowsocks start
+停止：/etc/init.d/shadowsocks stop
+重启：/etc/init.d/shadowsocks restart
+状态：/etc/init.d/shadowsocks status
+卸载：./shadowsocksR.sh uninstall
+ 
+配置文件路径：/etc/shadowsocks.json
+日志文件路径：/var/log/shadowsocks.log
+代码安装目录：/usr/local/shadowsocks
+</code></pre>
+]]></content>
+      <categories>
+        <category>科学上网</category>
+      </categories>
+      <tags>
+        <tag>SS</tag>
+        <tag>SSR</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用批处理代码段</title>
+    <url>/2019/03/14/%E5%B8%B8%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E4%BB%A3%E7%A0%81%E6%AE%B5/</url>
+    <content><![CDATA[<!-- toc -->
+
+<ul>
+<li><a href="#--------">常用批处理代码段</a><ul>
+<li><a href="#-------------">监测程序是否运行并自动启动</a></li>
+<li><a href="#--------------">打开资源管理器并选中某个文件</a></li>
+<li><a href="#---------">自动获取管理员权限</a></li>
+<li><a href="#--------">查找应该安装路径</a></li>
+<li><a href="#-----">获取用户名</a></li>
+<li><a href="#--cpl--">常见cpl文件</a></li>
+<li><a href="#----">路径扩展</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h1 id="常用批处理代码段"><a href="#常用批处理代码段" class="headerlink" title="常用批处理代码段"></a>常用批处理代码段</h1><span id="more"></span>
+<h2 id="监测程序是否运行并自动启动"><a href="#监测程序是否运行并自动启动" class="headerlink" title="监测程序是否运行并自动启动"></a>监测程序是否运行并自动启动</h2><pre><code class="bat">@echo off
+
+set APPName=unity.exe
+set APPPath=C:\Progra~1\Unity5.6.4p3\Editor\
+
+:startapp
+    tasklist|findstr /i %APPName% &gt; nul
+
+    if %errorlevel% == 0 (
+        echo ^&gt;%date:~0,10% %time:~0,8% &quot;程序正在运行中...&quot;
+    ) else (
+        echo ^&gt;%date:~0,10% %time:~0,8% &quot;程序未运行...&quot;
+        start %APPPath%%AppName% 2&gt;nul &amp;&amp; echo ^&gt;%date:~0,10% %time:~0,8% &quot;程序启动成功...&quot;
+    )
+    rem 等待5秒
+    for /l %%i in (1,1,5) do (
+        ping -n 1 -w 1000 125.0.0.1&gt;nul
+    )
+    goto startapp
+</code></pre>
+<h2 id="打开资源管理器并选中某个文件"><a href="#打开资源管理器并选中某个文件" class="headerlink" title="打开资源管理器并选中某个文件"></a>打开资源管理器并选中某个文件</h2><pre><code class="bat">@echo off
+
+set dir=D:\Test
+if not exist %dir%\%1.xlsx (
+    echo No Such File
+    pause
+    exit
+)
+svn revert %dir%\%1.xlsx
+svn up %dir%\%1.xlsx
+rem important!
+explorer /select,%dir%\%1.xlsx
+</code></pre>
+<h2 id="自动获取管理员权限"><a href="#自动获取管理员权限" class="headerlink" title="自动获取管理员权限"></a>自动获取管理员权限</h2><pre><code class="bat">&gt;nul 2&gt;&amp;1 &quot;%SYSTEMROOT%\system32\cacls.exe&quot; &quot;%SYSTEMROOT%\system32\config\system&quot;
+if &#39;%errorlevel%&#39; NEQ &#39;0&#39; ( goto UACPrompt ) else ( goto gotAdmin )
+:UACPrompt
+echo Set UAC = CreateObject^(&quot;Shell.Application&quot;^) &gt; &quot;%temp%\getadmin.vbs&quot;
+echo UAC.ShellExecute &quot;%~s0&quot;, &quot;&quot;, &quot;&quot;, &quot;runas&quot;, 1 &gt;&gt; &quot;%temp%\getadmin.vbs&quot;
+&quot;%temp%\getadmin.vbs&quot;
+exit /B
+:gotAdmin
+if exist &quot;%temp%\getadmin.vbs&quot; ( del &quot;%temp%\getadmin.vbs&quot; )
+</code></pre>
+<h2 id="查找应该安装路径"><a href="#查找应该安装路径" class="headerlink" title="查找应该安装路径"></a>查找应该安装路径</h2><pre><code class="bat">@echo off
+set /p dn=请输入安装程序名称关键字（例如：QQ）:
+
+set rp=HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+for /f &quot;tokens=*&quot; %%a in (&#39;reg query &quot;%rp%&quot;&#39;) do (
+     for /f &quot;tokens=*&quot; %%l in (&#39;reg query &quot;%rp%\%%~na&quot; /v &quot;DisplayName&quot; ^|findstr /i &quot;%dn%&quot;&#39;) do (
+          call :show %%~na
+     )
+)
+
+:show
+cls
+for /f &quot;tokens=1,2 delims=:&quot; %%b in (&#39;reg query &quot;%rp%\%1&quot; /v &quot;InstallLocation&quot; ^|findstr /i &quot;InstallLocation&quot;&#39;) do (
+    echo %%b
+    echo %%c
+)
+
+pause
+</code></pre>
+<h2 id="获取用户名"><a href="#获取用户名" class="headerlink" title="获取用户名"></a>获取用户名</h2><pre><code class="bat">echo %username%
+</code></pre>
+<h2 id="常见cpl文件"><a href="#常见cpl文件" class="headerlink" title="常见cpl文件"></a>常见cpl文件</h2><p>当您启动控制面板时，将自动加载 Windows\System32 文件夹中的 .cpl 文件</p>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Access.cpl</td>
+<td>“辅助功能”属性</td>
+</tr>
+<tr>
+<td><strong>Appwiz.cpl</strong></td>
+<td>“添加&#x2F;删除程序”属性</td>
+</tr>
+<tr>
+<td><strong>Desk.cpl</strong></td>
+<td>“显示”属性</td>
+</tr>
+<tr>
+<td>Hdwwiz.cpl</td>
+<td>“添加硬件”属性</td>
+</tr>
+<tr>
+<td>Inetcpl.cpl</td>
+<td>Internet 属性</td>
+</tr>
+<tr>
+<td>Intl.cpl</td>
+<td>“区域设置”属性</td>
+</tr>
+<tr>
+<td>Irprops.cpl</td>
+<td>“红外端口”属性</td>
+</tr>
+<tr>
+<td>Joy.cpl</td>
+<td>“游戏杆”属性</td>
+</tr>
+<tr>
+<td>Main.cpl</td>
+<td>“鼠标”属性</td>
+</tr>
+<tr>
+<td>Mmsys.cpl</td>
+<td>“多媒体”属性</td>
+</tr>
+<tr>
+<td>Ncpa.cpl</td>
+<td>“网络连接”属性</td>
+</tr>
+<tr>
+<td>Nusrmgr.cpl</td>
+<td>“用户帐户”属性</td>
+</tr>
+<tr>
+<td>Nwc.cpl</td>
+<td>Gateway Services for NetWare 属性</td>
+</tr>
+<tr>
+<td>Odbccp32.cpl</td>
+<td>“开放式数据库连接 (ODBC) 数据源管理器”属性</td>
+</tr>
+<tr>
+<td><strong>Powercfg.cpl</strong></td>
+<td>“电源选项”属性</td>
+</tr>
+<tr>
+<td>Sapi.cpl</td>
+<td>“语音”属性</td>
+</tr>
+<tr>
+<td>Sysdm.cpl</td>
+<td>“系统”属性</td>
+</tr>
+<tr>
+<td>Telephon.cpl</td>
+<td>“电话和调制解调器选项”属性</td>
+</tr>
+<tr>
+<td>Timedate.cpl</td>
+<td>“时间和日期”属性</td>
+</tr>
+</tbody></table>
+<h2 id="路径扩展"><a href="#路径扩展" class="headerlink" title="路径扩展"></a>路径扩展</h2><pre><code class="bat">@echo off
+rem 1.获取批处理自身的完整路径
+echo %0
+rem 2.获取批处理自身的完整路径，并去掉首尾的引号
+echo %~0
+rem 3.获取批处理自身的文件名和后缀名
+echo %~nx0
+rem 4.获取批处理自身的文件名
+echo %~n0
+rem 5.获取批处理自身的后缀名
+echo %~x0
+rem 6.获取批处理自身的完整路径，不含文件名
+echo %~dp0
+rem 7.获取批处理自身的盘符
+echo %~d0
+rem 8.获取批处理自身的大小
+echo %~z0
+rem 9.获取批处理自身的修改时间
+echo %~t0
+pause
+</code></pre>
+]]></content>
+      <categories>
+        <category>批处理</category>
+      </categories>
+      <tags>
+        <tag>批处理</tag>
+        <tag>bat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>饥荒服务器搭建</title>
+    <url>/2022/05/25/%E9%A5%A5%E8%8D%92%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><ol>
+<li>下载开服程序</li>
+</ol>
+<p>方法一：Steam内安装Dont’t Starve Together Dedicated Server<br>[图片]</p>
+<p>方法二：steamcmd (推荐)</p>
+<ul>
+<li><a href="%22https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip%22">点击下载steamcmd</a></li>
+<li>解压出来后，双击steamcmd.exe<br>[图片]</li>
+<li>依次执行下述指令，下载dstds程序</li>
+</ul>
+<blockquote>
+<p>force_install_dir D:\dstds\</p>
+</blockquote>
+<blockquote>
+<p>login anonymous</p>
+</blockquote>
+<blockquote>
+<p>app_update 343050 validate<br>[图片]</p>
+</blockquote>
+<ul>
+<li>输入quit指令或直接点击关闭按钮退出steamcmd</li>
+</ul>
+<p><code>后续如果需要更新dstds，重复第3步</code></p>
+<ol start="2">
+<li>获取令牌</li>
+</ol>
+<p>方法1：访问KLEI官网<br>[图片]</p>
+<p>方法二：启动饥荒联机版（以下简称“DST”）， 按~键调出控制台，执行指令：TheNet:GenerateClusterToken()</p>
+<p>令牌生成路径在%userprofile%\Documents\Klei\DoNotStarveTogether\用户id\cluster_token.txt</p>
+<ol start="3">
+<li>配置服务器</li>
+</ol>
+<p>默认配置文件：%userprofile%\Documents\Klei\DoNotStarveTogether\Cluster_1\</p>
+<ul>
+<li>复制任意存档目录Cluster_x到配置文件路径</li>
+<li>添加令牌文件：将之前生成的令牌文件复制到配置文件路径</li>
+<li>添加管理员(可选)：新建adminlist.txt文件，将用户ID（KU_开头）写入该文件，一行一个</li>
+<li>服务器配置说明：文件名 cluster.ini<br>[图片]<br>最终目录结构如下图：<br>[图片]</li>
+<li>MOD配置: <ul>
+<li>打开D:\dstds\mods\dedicated_server_mods_setup.lua文件，将需要的MOD按行写入<br>[图片]</li>
+</ul>
+</li>
+<li>打开modoverrides.lua配置MOD<br>[图片]</li>
+</ul>
+<ol start="4">
+<li>启动dstds</li>
+</ol>
+<p>打开 “D:\dstds\bin64&quot; 目录，双击 dontstarve_dedicated_server_nullrenderer_x64.exe 即可。<br>32位的系统 则找到是 “D:\dstds\bin&quot;，然后双击 dontstarve_dedicated_server_nullrenderer.exe 启动</p>
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p>系统环境：CentOS 8</p>
+<ol>
+<li>指令汇总</li>
+</ol>
+<ul>
+<li>安装依赖库</li>
+</ul>
+<blockquote>
+<p>yum install glibc.i686</p>
+</blockquote>
+<blockquote>
+<p>yum update -y libstdc++.x86_64</p>
+</blockquote>
+<blockquote>
+<p>yum install libstdc++.i686</p>
+</blockquote>
+<blockquote>
+<p>yum install libcurl.i686</p>
+</blockquote>
+<blockquote>
+<p>cd &#x2F;usr&#x2F;lib</p>
+</blockquote>
+<blockquote>
+<p>ln -s libcurl.so.4 libcurl-gnutls.so.4</p>
+</blockquote>
+<ul>
+<li>安装screen</li>
+</ul>
+<blockquote>
+<p>yum install screen</p>
+</blockquote>
+<ul>
+<li>下载安装 steamcmd</li>
+</ul>
+<blockquote>
+<p>mkdir ~&#x2F;steamcmd</p>
+</blockquote>
+<blockquote>
+<p>cd ~&#x2F;steamcmd</p>
+</blockquote>
+<blockquote>
+<p>wget <a href="https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz">https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz</a></p>
+</blockquote>
+<blockquote>
+<p>tar -xvzf steamcmd_linux.tar.gz</p>
+</blockquote>
+<ul>
+<li>下载 开服程序</li>
+</ul>
+<blockquote>
+<p>.&#x2F;steamcmd.sh</p>
+</blockquote>
+<blockquote>
+<p>force_install_dir ~&#x2F;dst&#x2F;dst_client</p>
+</blockquote>
+<blockquote>
+<p>login anonymous</p>
+</blockquote>
+<blockquote>
+<p>app_update 343050 validate</p>
+</blockquote>
+<blockquote>
+<p>quit</p>
+</blockquote>
+<ul>
+<li>启动 开服程序</li>
+</ul>
+<blockquote>
+<p>~&#x2F;dst&#x2F;dst_client&#x2F;bin&#x2F;dontstarve_dedicated_server_nullrenderer</p>
+</blockquote>
+<ul>
+<li><p>自动化脚本</p>
+<ul>
+<li>启动脚本</li>
+</ul>
+</li>
+</ul>
+<p>vim .&#x2F;startDST.sh</p>
+<p>粘贴下面内容：</p>
+<pre><code class="shell">#!/bin/bash
+
+steamcmd_dir=&quot;$HOME/steamcmd&quot;
+install_dir=&quot;$HOME/dst/dst_client&quot;
+cluster_name=&quot;Cluster_1&quot;
+dontstarve_dir=&quot;$HOME/Documents/Klei/DoNotStarveTogether&quot;
+
+function fail()
+&#123;
+        echo Error: &quot;$@&quot; &gt;&amp;2
+        exit 1
+&#125;
+
+function check_for_file()
+&#123;
+        if [ ! -e &quot;$1&quot; ]; then
+                fail &quot;Missing file: $1&quot;
+        fi
+&#125;
+
+cd &quot;$steamcmd_dir&quot; || fail &quot;Missing $steamcmd_dir directory!&quot;
+
+check_for_file &quot;steamcmd.sh&quot;
+check_for_file &quot;$dontstarve_dir/$cluster_name/cluster.ini&quot;
+check_for_file &quot;$dontstarve_dir/$cluster_name/cluster_token.txt&quot;
+check_for_file &quot;$dontstarve_dir/$cluster_name/Master/server.ini&quot;
+check_for_file &quot;$dontstarve_dir/$cluster_name/Caves/server.ini&quot;
+
+./steamcmd.sh +force_install_dir &quot;$install_dir&quot; +login anonymous +app_update 343050 validate +quit
+
+check_for_file &quot;$install_dir/dontstarve_dedicated_server_nullrenderer.app/Contents/MacOS/&quot;
+
+cd &quot;$install_dir/dontstarve_dedicated_server_nullrenderer.app/Contents/Resources/&quot; || fail
+
+run_shared=(../MacOS/dontstarve_dedicated_server_nullrenderer)
+run_shared+=(-console)
+run_shared+=(-cluster &quot;$cluster_name&quot;)
+run_shared+=(-monitor_parent_process $$)
+
+&quot;$&#123;run_shared[@]&#125;&quot; -shard Caves  | sed &#39;s/^/Caves:  /&#39; &amp;
+&quot;$&#123;run_shared[@]&#125;&quot; -shard Master | sed &#39;s/^/Master: /&#39;
+</code></pre>
+<ul>
+<li>更新脚本</li>
+</ul>
+<p>vim .&#x2F;updateDST.sh</p>
+<ul>
+<li>粘贴下面内容：</li>
+</ul>
+<pre><code class="shell">#!/bin/bash
+# 获得本sh所在目录
+sh_path=$(cd `dirname $0`; pwd)
+
+cmdDir=~/steamcmd/
+dstDir=~/dst/dst_client/
+
+&quot;$cmdDir&quot;steamcmd.sh \
+    +force_install_dir &quot;$dstDir&quot; \
+    +login anonymous \
+    +app_update 343050 validate  \
+    +quit
+</code></pre>
+<ul>
+<li><p>设置脚本为可执行</p>
+<pre><code class="shell">chmod +x ./startDST.sh
+chmod +x ./updateDST.sh
+</code></pre>
+</li>
+<li><p>screen基本用法</p>
+<ul>
+<li>创建 名为dst的会话</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>screen -S dst</p>
+</blockquote>
+<ul>
+<li><p>恢复 名为dst的会话</p>
+<blockquote>
+<p>screen -r dst</p>
+</blockquote>
+</li>
+<li><p>跳出会话(不关闭)，或者 按住ctrl + a 然后再按 d</p>
+<blockquote>
+<p>screen -d dst</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>有时 SSH意外断开，screen会话被占用<br>使用 screen -r dst，会提示 [screen is terminating]<br>可以使用 screen -d dst 来断开<br>然后重新 screen -r dst 来恢复会话</p>
+</blockquote>
+<ul>
+<li>在主会话中关闭子会话<blockquote>
+<p>screen -X -S dst quit</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><p><a href="%22https://developer.valvesoftware.com/wiki/SteamCMD#macOS%22">SteamCMD - Valve Developer Community</a></p>
+]]></content>
+  </entry>
+</search>
